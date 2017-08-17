@@ -17,29 +17,26 @@
 		<div class="danzerpress-wrap">
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-two-thirds">
-					<h2 class="danzerpress-title">Get your personalized quote now!</h2>
+					<h2 class="danzerpress-title">Get your free term life quote now!</h2>
 				</div>
-				<div class="danzerpress-one-third">
-					<a class="danzerpress-button">Get Quote</a>
+				<div class="danzerpress-one-third danzerpress-flex-column">
+					<a id="quote" href="" class="danzerpress-button" style="position: relative;">I need a free term life quote<span class="danzerpress-star">*</span></a>
+					<p style="text-align:center;"><a class="danzerpress-no-thanks" style="color:white;" href="<?php echo get_page_link(60); ?>"><span class="danzerpress-star">*</span>No thanks, I need life insurance that doesn't expire</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<footer id="colophon" class="site-footer danzerpress-footer">
-		<div id="">
+		<?php if(is_active_sidebar('footer-sidebar-1')){ ?>
 			<div class="danzerpress-wrap">
 				<div class="danzerpress-flex-row">
-					<?php
-					if(is_active_sidebar('footer-sidebar-1')){
 					
-						dynamic_sidebar('footer-sidebar-1');
-
-					}
-					?>
+					
+						<?php dynamic_sidebar('footer-sidebar-1'); ?>
 				</div>
 			</div>
-		</div>
+		<?php } ?>
 		<div class="site-info">
 			<?php
 				if(is_active_sidebar('footer-bottom-bar')){
@@ -57,6 +54,13 @@
 	    marginTop: 75, limit: $('.danzerpress-call-to-action').offset().top - $('.danzerpress-sidebar').outerHeight() - 420,
         zIndex: 1,
 	  });
+	});
+	</script>
+	<script type="text/javascript">
+	jQuery(function($) {
+	$('.nqwgt-btn').click(function() {
+	     PUM.close(92);
+	    });
 	});
 	</script>
 

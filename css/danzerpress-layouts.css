@@ -305,7 +305,8 @@ Bootstrap %'s
 @media screen and (max-width: 1050px) {
 	.danzerpress-main-ws {
 		flex: 0 0 calc(100%);
-	}
+    margin-bottom: 50px;
+  }
 	.danzerpress-sidebar {
 		flex: 0 0 calc(100%);
 		margin: 0 0 50px;
@@ -933,12 +934,12 @@ ul#primary-menu li:hover > .sub-menu {
 
 /*Admin Bar WordPress Fix*/
 .admin-bar header.drawer-navbar.drawer-navbar--fixed,
-button.drawer-toggle.drawer-hamburger {
+.admin-bar button.drawer-toggle.drawer-hamburger {
     top: 32px !important;
 }
 @media screen and (max-width: 782px) {
 	.admin-bar header.drawer-navbar.drawer-navbar--fixed,
-	button.drawer-toggle.drawer-hamburger {
+	.admin-bar button.drawer-toggle.drawer-hamburger {
 	    top: 46px !important;
 	}
 }

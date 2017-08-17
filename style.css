@@ -894,6 +894,15 @@ object {
 	display: block;
 }
 
+/*Pop up*/
+div#popmake-92 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+div#pum-92 {
+    background: rgba(0, 0, 0, 0.35);
+}
 
 /*Pages*/
 a {
@@ -913,6 +922,15 @@ a img:hover {
 }
 p:last-child {
 	margin-bottom: 0px;
+}
+.danzerpress-no-thanks {
+	position: relative;
+}
+.danzerpress-star {
+    font-weight: 700;
+    top: -5px;
+    position: absolute;
+    left: -13px;
 }
 a.danzerpress-button,
 button, 
@@ -948,6 +966,10 @@ a.a2a_dd.addtoany_share_save svg {
 footer.entry-footer {
     margin-top: 20px;
 }
+a.danzerpress-no-thanks {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.50);
+    text-decoration: underline;
+}
 
 /*Home Page*/
 /*Section 1*/
@@ -957,9 +979,27 @@ footer.entry-footer {
     min-height: 500px;
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .danzerpress-section-one h1.danzerpress-title {
     color: white !important;
+}
+.danzerpress-button .danzerpress-star {
+    font-weight: 700;
+    top: 9px;
+    position: absolute;
+    right: 6px;
+    font-size: 20px;
+    left: inherit;
+}
+@media screen and (max-width: 767px) {
+	.danzerpress-section.danzerpress-section-one {
+		background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(45, 44, 44, 0.3)), url(https://lifeinsurance316.bdanzer.com/wp-content/uploads/2017/08/canstockphoto7363245-e1502489983577.jpg);
+	    background-position: 0;
+    	background-attachment: inherit;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	}
 }
 /*Section 2*/
 .danzerpress-section.danzerpress-section-two {
@@ -985,6 +1025,11 @@ footer.entry-footer {
 	    -ms-flex: 0 0 calc(100%) !important;
 		flex: 0 0 100% !important;
 		max-width: 100% !important;
+	}
+	.danzerpress-section-two-about .danzerpress-col-3 {
+		-ms-flex: 0 0 calc(50%) !important;
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
 	}
 }
 

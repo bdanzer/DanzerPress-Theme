@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="danzerpress-container-fw">
 		<main id="main" class="danzerpress-wrap">
-			<div class="danzerpress-flex-row">
+			<div class="danzerpress-flex-row" style="flex-wrap: inherit !important;">
 				<div class="danzerpress-main-ws">
 					<div class="danzerpress-box danzerpress-white">
 					<?php
