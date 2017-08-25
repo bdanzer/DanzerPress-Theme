@@ -19,11 +19,7 @@ get_header(); ?>
 			<div class="danzerpress-main-ns">
 
 				<?php
-				while ( have_posts() ) : the_post();
-
 					get_template_part( 'template-parts/content', 'home' );
-
-				endwhile; // End of the loop.
 				?>
 
 			</div>

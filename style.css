@@ -894,15 +894,6 @@ object {
 	display: block;
 }
 
-/*Pop up*/
-div#popmake-92 {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-div#pum-92 {
-    background: rgba(0, 0, 0, 0.35);
-}
 
 /*Pages*/
 a {
@@ -922,15 +913,6 @@ a img:hover {
 }
 p:last-child {
 	margin-bottom: 0px;
-}
-.danzerpress-no-thanks {
-	position: relative;
-}
-.danzerpress-star {
-    font-weight: 700;
-    top: -5px;
-    position: absolute;
-    left: -13px;
 }
 a.danzerpress-button,
 button, 
@@ -965,102 +947,6 @@ a.a2a_dd.addtoany_share_save svg {
 }
 footer.entry-footer {
     margin-top: 20px;
-}
-a.danzerpress-no-thanks {
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.50);
-    text-decoration: underline;
-}
-
-/*Home Page*/
-/*Section 1*/
-.danzerpress-section.danzerpress-section-one {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(45, 44, 44, 0.3)), url(https://lifeinsurance316.bdanzer.com/wp-content/uploads/2017/08/canstockphoto7363245-e1502489983577.jpg);
-    background-position: 0px -46px;
-    min-height: 500px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.danzerpress-section-one h1.danzerpress-title {
-    color: white !important;
-}
-.danzerpress-button .danzerpress-star {
-    font-weight: 700;
-    top: 9px;
-    position: absolute;
-    right: 6px;
-    font-size: 20px;
-    left: inherit;
-}
-@media screen and (max-width: 767px) {
-	.danzerpress-section.danzerpress-section-one {
-		background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(45, 44, 44, 0.3)), url(https://lifeinsurance316.bdanzer.com/wp-content/uploads/2017/08/canstockphoto7363245-e1502489983577.jpg);
-	    background-position: 0;
-    	background-attachment: inherit;
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	}
-}
-/*Section 2*/
-.danzerpress-section.danzerpress-section-two {
-    padding: 20px 0 0;
-}
-
-/*Section 3 & About Page Fixes*/
-.danzerpress-section.danzerpress-section-three {
-    padding: 0;
-}
-.danzerpress-section-three .danzerpress-col-2:last-child img {
-    width: 100%;
-    max-height: 450px;
-    object-fit: cover;
-}
-.danzerpress-about .danzerpress-col-2:last-child img {
-	max-height: 100%;
-	height: 100%;
-}
-
-@media screen and (max-width: 767px) {
-	.danzerpress-section-three .danzerpress-col-2:last-child {
-	    -ms-flex: 0 0 calc(100%) !important;
-		flex: 0 0 100% !important;
-		max-width: 100% !important;
-	}
-	.danzerpress-section-two-about .danzerpress-col-3 {
-		-ms-flex: 0 0 calc(50%) !important;
-		flex: 0 0 50% !important;
-		max-width: 50% !important;
-	}
-}
-
-/*Section 4*/
-.danzerpress-section-four .fa,
-.danzerpress-section-two-about .fa {
-    font-size: 40px;
-    color: #d0e0e3;
-}
-
-/*Section 5*/
-.danzerpress-image-wrap img {
-    max-height: 180px;
-    width: 100%;
-    object-fit: cover;
-}
-.danzerpress-description {
-    background: #ffffff;
-    padding: 20px;
-}
-.danzerpress-description h3 {
-	margin-top: 0px;
-}
-
-/*Section 6*/
-.danzerpress-section-six .danzerpress-description {
-	background: #f8f9f9;
-}
-.danzerpress-author-testimonial {
-	color: #082568 !important;
-	text-align: center;
 }
 
 /*Div Fixes*/
@@ -1104,13 +990,6 @@ article h1,
   -vendor-animation-iteration-count: infinite;
 }
 
-/*Quoter*/
-.nq_border_color.nq_background_color,
-h4.nq_headline_text_color.nq_headline_bg_color.nq_headline_text {
-    border: none !important;
-    border-radius: 0px !important;
-}
-
 /*Contact Form*/
 input[type="text"], 
 input[type="email"], 
@@ -1138,33 +1017,9 @@ input[type="color"], textarea {
 .danzerpress-footer h3.widget-title {
     color: white !important;
 }
-.danzerpress-call-to-action {
-    background: #d0e0e3;
-    padding: 40px 0;
-}
-.danzerpress-call-to-action .danzerpress-two-thirds {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.danzerpress-call-to-action .danzerpress-title {
-    margin: 0;
-    font-size: 27px;
-}
-.danzerpress-call-to-action .danzerpress-one-third {
-	margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.danzerpress-call-to-action .danzerpress-button {
-    background: #082568;
-    width: 100%;
-}
 .site-info {
     background: #23282d;
-    color: #d0e0e3;
+    color: white;
     font-size: 14px;
     padding: 5px 0;
     text-align: center;
