@@ -20,16 +20,6 @@
 	<?php wp_head(); ?>
 
 
-	<!-- drawer.css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
-	<!-- jquery & iScroll -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-	<!-- drawer.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-
 </head>
 
 <body <?php body_class( array( "drawer", "drawer--top", "drawer--navbarTopGutter" ) ); ?>>
@@ -39,9 +29,9 @@
         <?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
 				<?php else : ?>
-					<a class="drawer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<!-- <a class="drawer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
 				<?php endif;?>
         <button type="button" class="drawer-toggle drawer-hamburger">
           <span class="sr-only">toggle navigation</span>
@@ -59,10 +49,24 @@
       </nav>
     </div>
   </header>
-  <script>
-    jQuery(function($) {
-      $('.drawer').drawer();
-    });
-  </script>
+
+<?php
+if ( is_page() && get_the_post_thumbnail_url() !== false ) {
+	$url = get_the_post_thumbnail_url();
+} elseif ( is_page() && get_the_post_thumbnail_url() === false ) {
+	$url = 'https://unsplash.it/1920/1080/?random';
+}
+?>
+
+<style type="text/css">
+.danzerpress-home-background {
+    background-image: url(<?php echo $url; ?>) !important;
+    background-image: linear-gradient(rgba(16, 16, 16, 0.74), rgba(99, 99, 99, 0)), url(<?php echo $url; ?>) !important;
+    background-size: cover !important;
+    background-position: 20% 67% !important;
+    background-attachment: fixed !important;
+    padding: 170px 0 !important;
+}
+</style>
 
 	<div id="content" class="site-content">

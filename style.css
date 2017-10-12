@@ -55,6 +55,12 @@ html {
 body {
 	margin: 0;
 }
+html,
+body,
+.site-content {
+    height: 100%;
+    background: #f8f9f9;
+}
 
 article,
 aside,
@@ -188,6 +194,47 @@ button,
 select {
 	text-transform: none;
 }
+::placeholder {
+    color: #404040 !important;
+    opacity: 0.5;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+input[type="password"], 
+input[type="search"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="range"], 
+input[type="date"], 
+input[type="month"], 
+input[type="week"], 
+input[type="time"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="color"], 
+textarea, 
+select {
+    background: white;
+    border: none !important;
+    padding: 3px 10px;
+    color: #404040 !important;
+    width: 100%;
+}
+/*input:focus {
+    background: #0168ad !important;
+    color: white !important;
+}*/
+select {
+    color: rgba(64, 64, 64, 0.38) !important;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required:focus,
+select:visited {
+    color: #404040 !important;
+}
+
 
 button,
 html input[type="button"],
@@ -254,12 +301,33 @@ table {
 
 td,
 th {
-	padding: 0;
+	text-align: center;
+    padding: 8px;
+}
+td {
+    background: white;
+}
+th {
+    background: #242a2f;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+tr, th, td {
+    border: 1px solid black;
 }
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+::-moz-selection { 
+	background: #CB4335; 
+	color: white;
+}
+::selection { 
+	background: #CB4335; 
+	color: white;
+}
 body,
 button,
 input,
@@ -377,6 +445,7 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	margin-left: 0px;
 }
 
 ul {
@@ -405,6 +474,17 @@ img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
+.danzerpress-icon-box {
+    max-width: 60px;
+    margin: 0 0 5px;
+}
+.danzerpress-image-wrap img {
+    border: 1px solid #201927;
+}
+.danzerpress-image-wrap {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    line-height: 0px;
+}
 
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
@@ -413,6 +493,19 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .home p#danzerpress-button-1 {
+        text-align: center !important;
+    }
+    .danzerpress-icon-box {
+        position: absolute;
+        max-width: 50px !important;
+    }
+    .danzerpress-content-box {
+        margin-left: 63px !important;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -503,15 +596,60 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+img.custom-logo:hover {
+    transform: inherit;
+}
+ul#primary-menu li a {
+    color: white;
+}
+ul#primary-menu {
+    background: transparent;
+}
+span.drawer-hamburger-icon, 
+span.drawer-hamburger-icon:before, 
+span.drawer-hamburger-icon:after {
+    background: white;
+}
+header.drawer-navbar.drawer-navbar--fixed {
+    background-color: #201927 !important;
+    background-color: #242a2f !important;
+}
+nav.drawer-nav {
+    background: transparent;
+}
+.drawer-navbar .drawer-navbar-header {
+    background: transparent !important;
+}
+.drawer-navbar-header,
+header.drawer-navbar.drawer-navbar--fixed {
+    border: none !important;
+}
+ul#primary-menu li a:hover {
+    color: white;
+    text-decoration: none;
+}
+ul#primary-menu li:hover {
+    border-top: 4px solid #CB4335;
+}
+ul#primary-menu li {
+    border-top: 4px solid transparent;
+    transition: all 400ms ease;
+}
+.current-menu-item {
+    border-color: #CB4335 !important;
+}
+.sub-menu li
+.sub-menu li:hover {
+	border-top: none !important;
+}
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
 }
 
 a:visited {
-	color: purple;
 }
 
 a:hover,
@@ -604,6 +742,10 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
+}
+
+.sub-menu li a {
+    color: #242a2f !important;
 }
 
 /* Small menu. */
@@ -743,6 +885,9 @@ a:active {
 .widget select {
 	max-width: 100%;
 }
+h2.widget-title {
+    margin-bottom: 0;
+}
 
 /*--------------------------------------------------------------
 # Content
@@ -750,6 +895,19 @@ a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.danzerpress-title-area {
+    background-image: url(https://unsplash.it/1920/1080/?random);
+    background-image: linear-gradient(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)), url(https://unsplash.it/1920/1080/?random);
+    background-size: cover;
+    background-position: 100% 100%;
+    padding: 40px 0;
+    background-attachment: fixed;
+    background: #CB4335;
+}
+.danzerpress-title-area .danzerpress-title {
+    margin: 0;
+    color: white !important;
+}
 .sticky {
 	display: block;
 }
@@ -820,6 +978,11 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+}
+a.custom-logo-link img {
+    max-height: 60px;
+    width: auto;
+    padding: 7px 0 3px;
 }
 
 /*--------------------------------------------------------------
@@ -898,11 +1061,9 @@ object {
 /*Pages*/
 a {
 	text-decoration: none;
-	color: #5987A0;
 }
 a:visited {
 	opacity: 0.7;
-	color: #5987A0;
 }
 a:hover {
 	opacity: 0.7;
@@ -914,18 +1075,12 @@ a img:hover {
 p:last-child {
 	margin-bottom: 0px;
 }
-a.danzerpress-button,
-button, 
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] {
-    background: #082568 !important;
-}
-a.danzerpress-button-off {
-    background: #494949 !important;
+a.custom-logo-link img {
+    max-height: 60px;
+    width: auto;
 }
 a.a2a_dd.addtoany_share_save svg {
-    background: #082568;
+    background: #CB4335;
 }
 .danzerpress-gallery {
     background: white;
@@ -934,7 +1089,7 @@ a.a2a_dd.addtoany_share_save svg {
     margin-top: 0;
 }
 .cat-links a {
-    background: #5987A0;
+    background: #CB4335;
     padding: 4px;
     border-radius: 5px;
     color: white;
@@ -966,12 +1121,12 @@ footer.entry-footer {
     background: transparent;
     padding: 5px 10px;
     display: inline-block;
-    color: #5987A0;
+    color: white;
     text-transform: uppercase;
-    border: 1px solid #5987A0;
+    border: 1px solid #CB4335;
 }
 .nav-next a {
-    background: #5987a0;
+    background: #CB4335;
     color: white;
 }
 nav.navigation.post-navigation {
@@ -1031,3 +1186,11 @@ input[type="color"], textarea {
     font-size: 12px;
     color: white;
 }
+footer#colophon {
+    background: #CB4335;
+}
+.site-info p {
+    font-size: 12px;
+    color: white;
+}
+

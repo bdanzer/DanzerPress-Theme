@@ -138,28 +138,56 @@ function danzerpress_scripts() {
 	wp_enqueue_style( 'danzerpress-style', get_stylesheet_uri() );
 
 	//wp_enqueue_script( 'danzerpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'danzerpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+  	// jquery libraries
+	wp_enqueue_script( 'jquery-2.1.1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, false );
+
+  	// Drawer
+    wp_enqueue_style( 'drawer-min-css', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css' );
+	wp_enqueue_style( 'drawer-css', get_template_directory_uri() . '/css/drawer.css' );
+
+	// jquery & iscroll
+	wp_enqueue_script('drawer-iscroll', 'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js', array(), null, true );
+	wp_enqueue_script('drawer-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js', array(), null, true );
+
+	// Animate.css
+	wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+
+	// Danzerpress Layouts
 	wp_enqueue_style( 'danzerpress-layouts', get_template_directory_uri() . '/css/danzerpress-layouts.css' );
 
-	wp_enqueue_style( 'drawer', get_template_directory_uri() . '/css/drawer.css' );
-
-	//Font Awesome
-    wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/3be2183bb5.js' );
+	// Font Awesome
+    wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/3be2183bb5.js', array(), null, true );
     
-    //Google Fonts
+    // Google Fonts
     wp_enqueue_style( 'google fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:400,500,700,800', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	//Danzerpress Scroll to fix
-    wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
-    wp_enqueue_script( 'danzerpress-js', get_template_directory_uri() . '/js/danzerpress.js', array('jquery'), '1.0.0');
+	// Danzerpress Scroll to fix
+    // wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
+
+    // Waypoints
+	wp_enqueue_script( 'jquery-waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js', array(), null, true );
+	wp_enqueue_script( 'waypoints-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js', array(), null, true );
+	wp_enqueue_script( 'danzerpress-js', get_template_directory_uri() . '/js/danzerpress.js', array('jquery'), null, true );
+	wp_enqueue_script( 'waypoints-debug', get_template_directory_uri() . '/js/waypoints.debug.js', array(), null, true  );
 }
 add_action( 'wp_enqueue_scripts', 'danzerpress_scripts' );
+
+function add_drawer_to_footer() { ?>
+
+	<script type="text/javascript">
+		jQuery(function($) {
+		  $('.drawer').drawer();
+		});
+	</script>
+
+<?php }
+add_action('wp_footer', 'add_drawer_to_footer');
 
 // Replaces the excerpt "Read More" text by a link
 function new_excerpt_more($more) {
