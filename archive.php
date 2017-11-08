@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="danzerpress-container-fw">
+	<div id="primary" class="danzerpress-container-fw" style="padding-top: 40px;">
 		<main id="main" class="danzerpress-wrap">
 			<header class="page-header">
 				<?php

@@ -22,7 +22,6 @@
   width: 16.25rem;
   height: 100%;
   color: #222;
-  background-color: #fff;
 }
 
 .site-title {
@@ -335,7 +334,6 @@ ul#primary-menu {
 
 .drawer-navbar .drawer-navbar-header {
   border-bottom: 1px solid #ddd;
-  background-color: #fff;
 }
 
 .drawer-navbar {
@@ -381,7 +379,6 @@ ul#primary-menu {
     height: 3.75rem;
     height: auto !important;
     border-bottom: 1px solid #ddd;
-    background-color: #fff;
   }
 
   .drawer-navbar .drawer-navbar-header {
@@ -477,9 +474,9 @@ ul#primary-menu {
 .drawer-dropdown.open > .sub-menu {
   display: block;
 }
-ul#primary-menu li:hover > .sub-menu {
+/*ul#primary-menu li:hover > .sub-menu {
     display: block;
-}
+}*/
 
 /*! drawer-caret */
 
@@ -509,14 +506,24 @@ ul#primary-menu li:hover > .sub-menu {
 
 /*Admin Bar WordPress Fix*/
 .admin-bar header.drawer-navbar.drawer-navbar--fixed,
-.admin-bar button.drawer-toggle.drawer-hamburger {
+.admin-bar button.drawer-toggle.drawer-hamburger,
+/*.emergency-header-active header.drawer-navbar.drawer-navbar--fixed,*/
+.emergency-header-active button.drawer-toggle.drawer-hamburger {
     top: 32px !important;
 }
+.admin-bar.emergency-header-active button.drawer-toggle.drawer-hamburger {
+    top: 64px !important;
+}
+
 @media screen and (max-width: 782px) {
 	.admin-bar header.drawer-navbar.drawer-navbar--fixed,
-	.admin-bar button.drawer-toggle.drawer-hamburger {
+	.admin-bar button.drawer-toggle.drawer-hamburger
+ /* .emergency-header-active header.drawer-navbar.drawer-navbar--fixed*/{
 	    top: 46px !important;
 	}
+  .admin-bar.emergency-header-active button.drawer-toggle.drawer-hamburger {
+      top: 78px !important;
+  }
 }
 
 /*!------------------------------------*\

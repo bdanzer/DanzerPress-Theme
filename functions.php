@@ -128,6 +128,13 @@ function danzerpress_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 		) );
+	register_sidebar( array(
+		'name' => 'Emergency Header',
+		'id' => 'emergency-header',
+		'description' => 'This appears at the top of the website',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s wow shake danzerpress-emergency-header">',
+		'after_widget' => '</aside>',
+		) );
 }
 add_action( 'widgets_init', 'danzerpress_widgets_init' );
 
@@ -154,6 +161,10 @@ function danzerpress_scripts() {
 	// Animate.css
 	wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 
+	//wow-js
+	wp_enqueue_script('wow-min-js', get_template_directory_uri() . '/js/wow.min.js', array(), null, true );
+
+
 	// Danzerpress Layouts
 	wp_enqueue_style( 'danzerpress-layouts', get_template_directory_uri() . '/css/danzerpress-layouts.css' );
 
@@ -161,7 +172,7 @@ function danzerpress_scripts() {
     wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/3be2183bb5.js', array(), null, true );
     
     // Google Fonts
-    wp_enqueue_style( 'google fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:400,500,700,800', false);
+    wp_enqueue_style( 'google fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:400,500,700,800|Roboto', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -175,15 +186,23 @@ function danzerpress_scripts() {
 	wp_enqueue_script( 'waypoints-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js', array(), null, true );
 	wp_enqueue_script( 'danzerpress-js', get_template_directory_uri() . '/js/danzerpress.js', array('jquery'), null, true );
 	wp_enqueue_script( 'waypoints-debug', get_template_directory_uri() . '/js/waypoints.debug.js', array(), null, true  );
+
 }
 add_action( 'wp_enqueue_scripts', 'danzerpress_scripts' );
+
+add_filter( 'walker_nav_menu_start_el', 'wpse_add_arrow',10,4);
+function wpse_add_arrow( $item_output, $item, $depth, $args ){
+    //Only add class to 'top level' items on the 'primary' menu.
+    if('primary' == $args->theme_location && $depth ==0){
+        $item_output .='<span class="arrow"></span>';
+    }
+    return $item_output;
+}
 
 function add_drawer_to_footer() { ?>
 
 	<script type="text/javascript">
-		jQuery(function($) {
-		  $('.drawer').drawer();
-		});
+		
 	</script>
 
 <?php }
@@ -191,8 +210,8 @@ add_action('wp_footer', 'add_drawer_to_footer');
 
 // Replaces the excerpt "Read More" text by a link
 function new_excerpt_more($more) {
-       global $post;
-	return '...<br><p><a class="danzerpress-button" href="'. get_permalink($post->ID) . '"> Read more</a></p>';
+    global $post;
+	return '...<br><p><a class="danzerpress-button-modern" href="'. get_permalink($post->ID) . '"> Read more</a></p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -200,6 +219,11 @@ function modify_read_more_link() {
     return '<a class="danzerpress-button" href="' . get_permalink() . '">Your Read More Link Text</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+function danzerpress_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'danzerpress_excerpt_length', 999 );
 
 /**
  * Implement the Custom Header feature.
@@ -227,3 +251,65 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * DanzerPress Sections functions
+ */
+require get_template_directory() . '/inc/danzerpress-sections-functions.php';
+
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+ 
+function my_acf_settings_path( $path ) {
+ 
+    // update path
+    $path = get_stylesheet_directory() . '/acf/';
+    
+    // return
+    return $path;
+    
+}
+
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+ 
+function my_acf_settings_dir( $dir ) {
+ 
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/acf/';
+    
+    // return
+    return $dir;
+    
+}
+ 
+// 3. Hide ACF field group menu item
+//add_filter('acf/settings/show_admin', '__return_false');
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/acf/acf.php' );
+
+if( function_exists('acf_add_options_page') ) {	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'DanzerPress Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
+
+include_once( get_stylesheet_directory() . '/inc/theme-options.php' );

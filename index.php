@@ -9,14 +9,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="danzerpress-container-fw">
-		<main id="main" class="danzerpress-wrap">
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="danzerpress-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+	<div id="primary" class="danzerpress-container-fw" style="">
+		<?php
+			echo '
+			<div class="danzerpress-title-area">
+				<h1 class="danzerpress-title">' . get_the_archive_title() . '</h1>
+			</div>
+			';
+			the_archive_description( '<div class="archive-description">', '</div>' );
+		?>
+		<main id="main" class="danzerpress-wrap" style="padding-top: 45px;">
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-main-ns">
 

@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="danzerpress-col-3 animated fadeInUp">
+<div class="danzerpress-col-3 wow fadeInUp">
 	<article id="post-<?php the_ID(); ?>" <?php post_class( array( "danzerpress-gallery" ) ); ?>>
 		<div class="danzerpress-thumbnail">
         	<?php 
@@ -27,12 +27,7 @@
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
 
-				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php danzerpress_posted_on(); ?>
-				</div><!-- .entry-meta -->
-				<?php
-				endif; ?>
+				?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -46,7 +41,7 @@
 			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
-				<?php danzerpress_entry_footer(); ?>
+				
 			</footer><!-- .entry-footer -->
 		</div>
 	</article><!-- #post-<?php the_ID(); ?> -->

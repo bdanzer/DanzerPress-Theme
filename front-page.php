@@ -18,8 +18,14 @@ get_header(); ?>
 		<div class="danzerpress-flex-row">
 			<div class="danzerpress-main-ns">
 
-				<?php
-					get_template_part( 'template-parts/content', 'home' );
+				<?php 
+
+				if (have_posts()) : while (have_posts()) : the_post(); 
+
+					get_template_part( 'template-pages/danzerpress', 'sections' );
+
+				endwhile; endif; 
+
 				?>
 
 			</div>
