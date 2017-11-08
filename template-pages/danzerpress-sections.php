@@ -18,14 +18,6 @@
 <div class="danzerpress-container-fw">
 
 	<?php 
-	if ( !is_home() && !is_front_page() ) {
-		echo '
-		<div class="danzerpress-title-area">
-			<h1 class="danzerpress-title">' . get_the_title() . '</h1>
-		</div>
-		';
-
-	}
 
 	if (is_home() || is_front_page()) {
 		if ( get_field('full_screen_section_1', 'option') === true ) { ?>
@@ -48,6 +40,8 @@
 	if( have_rows('flexible_layout') ):
 		$section_is_odd = 0;
 		$section_number = 1;
+
+	$hero_section = '';
 
 	 	// loop through the rows of data
 	    while ( have_rows('flexible_layout') ) : the_row();
@@ -141,6 +135,7 @@
 	        	<?php
 	        	//Vars
 
+
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?>  
 					<div class="danzerpress-flex-row">
@@ -149,7 +144,7 @@
 							if ($section_image) {
 								echo 
 								'
-								<div class="danzerpress-network-img">
+								<div class="danzerpress-icon-img">
 									<img src="' . $section_image . '">
 								</div>
 								';

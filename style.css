@@ -651,6 +651,9 @@ ul#primary-menu li a:hover {
 ul#primary-menu li:hover {
     border-top: 4px solid #05C4EB;
 }
+ul#primary-menu .sub-menu li:hover {
+    border-top: 4px solid transparent;
+}
 ul#primary-menu li {
     border-top: 4px solid transparent;
     transition: all 400ms ease;
@@ -660,14 +663,11 @@ ul#primary-menu li {
     border-color: #05C4EB !important;
 }
 .sub-menu li
-.sub-menu li:hover {
+ul#primary-menu .sub-menu li:hover {
 	border-color: transparent !important;
 }
 .drawer-nav .menu-menu-1-container {
     background: white;
-}
-.sub-menu li:hover {
-    border: none !important;
 }
 .drawer-navbar #primary-menu li a {
     font-family: roboto;
@@ -723,7 +723,7 @@ ul#primary-menu li {
 header.drawer-navbar.drawer-navbar--fixed.transparent {
     background: #242a2f;
 }
-.home header.drawer-navbar.drawer-navbar--fixed.transparent {
+header.drawer-navbar.drawer-navbar--fixed.transparent {
     background: transparent;
 }
 header.drawer-navbar.drawer-navbar--fixed.non-transparent {
@@ -1014,18 +1014,6 @@ h2.widget-title {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.danzerpress-title-area {
-    background-image: url(https://unsplash.it/1920/1080/?random);
-    background-image: linear-gradient(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)), url(https://unsplash.it/1920/1080/?random);
-    background-size: cover;
-    background-position: 100% 100%;
-    padding: 40px 0;
-    background-attachment: fixed;
-    background: #05C4EB;
-    background: #56CCF2;
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
-    background: linear-gradient(to right, #2F80ED, #56CCF2);
-}
 .danzerpress-title-area .danzerpress-title {
     margin: 0;
     color: white !important;

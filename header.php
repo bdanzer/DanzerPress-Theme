@@ -82,3 +82,50 @@ if (get_field('navigation_style', 'option') == 'transparent') {
   </header>
 
 	<div id="content" class="site-content">
+
+<?php
+
+if ( !is_front_page() ) {
+    if ( is_archive() ) {
+      $title = get_the_archive_title();
+    } elseif ( is_home() ) {
+      $title = get_the_archive_title();
+    } elseif ( is_page() ) {
+      $title = get_the_title();
+    } elseif ( is_single() ) {
+      $title = get_the_title();
+    }
+    echo '
+    <div class="danzerpress-title-area">
+      <h1 class="danzerpress-title">' . $title . '</h1>
+    </div>
+    ';
+
+    if (get_the_post_thumbnail_url()) {
+      $url = get_the_post_thumbnail_url();
+    } else {
+      $url = 'https://unsplash.it/1920/1070/?random';
+    }
+    ?>
+    <style type="text/css">
+      .danzerpress-title-area {
+          background-image: url(<?php echo $url; ?>);
+          background-image: linear-gradient(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)), url(<?php echo $url; ?>);
+          background-size: cover;
+          background-position: 100% 100%;
+          padding: 40px 0;
+          background-attachment: fixed;
+      }
+      .danzerpress-transparent .danzerpress-title-area {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)), url(<?php echo $url; ?>);
+          background-size: cover;
+          background-position: 100% 100%;
+          padding: 170px 0;
+          background-attachment: fixed;
+          margin-top: -62px;
+      }
+    </style>
+  <?php }
+
+?>
+

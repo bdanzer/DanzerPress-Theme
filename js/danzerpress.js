@@ -12,11 +12,11 @@
 		    {   
 		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').css({"background":"#242a2f"});
 		    } else {
-		       $('.home header.drawer-navbar.drawer-navbar--fixed.transparent').css({"background":"transparent", "transition":".7s"});
+		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').css({"background":"transparent", "transition":".7s"});
 		    }
 		});
 
-	  	$(".ps2id").on('click', function(event) {
+	  	$("a").on('click', function(event) {
 
 	    // Make sure this.hash has a value before overriding default behavior
 	    if (this.hash !== "") {

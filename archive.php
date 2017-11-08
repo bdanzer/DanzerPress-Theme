@@ -11,12 +11,6 @@ get_header(); ?>
 
 	<div id="primary" class="danzerpress-container-fw" style="padding-top: 40px;">
 		<main id="main" class="danzerpress-wrap">
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="danzerpress-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-main-ns">
 

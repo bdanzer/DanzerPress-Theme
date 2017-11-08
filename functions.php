@@ -109,6 +109,13 @@ function danzerpress_content_width() {
 }
 add_action( 'after_setup_theme', 'danzerpress_content_width', 0 );
 
+
+function is_blog () {
+	global  $post;
+	$posttype = get_post_type($post );
+	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+}
+
 /**
  * Register widget area.
  *
@@ -187,6 +194,10 @@ function danzerpress_scripts() {
     
     // Google Fonts
     wp_enqueue_style( 'google fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:400,500,700,800|Roboto', false);
+
+    //Fancybox
+    wp_enqueue_script( 'fancybox.js', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_style( 'fancybox.css', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

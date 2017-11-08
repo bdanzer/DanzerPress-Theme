@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="danzerpress-wrap">
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-two-thirds">
-					<div class="danzerpress-blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+					<div class="danzerpress-blog-thumbnail"><div class="danzerpress-image-wrap"><?php the_post_thumbnail(); ?></div></div>
 					<div class="danzerpress-box danzerpress-white" style="padding: 20px 0;">
 					<?php
 					while ( have_posts() ) : the_post();
@@ -22,12 +22,8 @@ get_header(); ?>
 
 						
 
-						
-
-					endwhile; // End of the loop.
-					?>
-					</div>
-				<div id="cooler-nav" class="navigation danzerpress-flex-row">
+						?>
+						<div id="cooler-nav" class="navigation danzerpress-flex-row">
 		<?php $prevPost = get_previous_post(true);
 			if($prevPost) {?>
 				<div class="nav-box previous danzerpress-col-2">
@@ -51,7 +47,7 @@ get_header(); ?>
 				if($nextPost) { ?>
 				<div class="nav-box next danzerpress-col-2" style="float:right;">
 					<?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID); ?>
-					<?php next_post_link('%link',"<p style='background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(45, 45, 45, 0.29)), url(" . $prevthumbnail . ");
+					<?php next_post_link('%link',"<p style='background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(45, 45, 45, 0.29)), url(" . $nextthumbnail . ");
     height: 200px;
     background-size: cover;
     align-items: center;
@@ -67,6 +63,11 @@ get_header(); ?>
 				</div>
 		<?php } ?>
 	</div><!--#cooler-nav div -->
+					<?php
+					endwhile; // End of the loop.
+					?>
+					</div>
+
 				</div>
 				<div id="" class="danzerpress-one-third">
 					<div class="danzerpress-box">
