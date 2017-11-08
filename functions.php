@@ -83,6 +83,20 @@ if ( ! function_exists( 'danzerpress_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'danzerpress_setup' );
 
+//add update support
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/bdanzer/DanzerPress-Theme',
+	__FILE__,
+	'danzerpress'
+);
+
+//Optional: If you're using a private repository, specify the access token like this:
+//$myUpdateChecker->setAuthentication('your-token-here');
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
