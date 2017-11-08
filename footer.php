@@ -13,26 +13,26 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer danzerpress-footer">
-		<?php if(is_active_sidebar('footer-sidebar-1')){ ?>
-			<div class="danzerpress-wrap">
-				<div class="danzerpress-flex-row">
-					
-					
+	<?php if(is_active_sidebar('footer-bottom-bar')){ ?>
+		<footer id="colophon" class="site-footer danzerpress-footer">
+			<?php if(is_active_sidebar('footer-sidebar-1')){ ?>
+				<div class="danzerpress-wrap">
+					<div class="danzerpress-flex-row">
 						<?php dynamic_sidebar('footer-sidebar-1'); ?>
+					</div>
 				</div>
-			</div>
-		<?php } ?>
-		<div class="site-info">
-			<?php
-				if(is_active_sidebar('footer-bottom-bar')){
-				
-					dynamic_sidebar('footer-bottom-bar');
+			<?php } ?>
+			<div class="site-info">
+				<?php
+					if(is_active_sidebar('footer-bottom-bar')){
+					
+						dynamic_sidebar('footer-bottom-bar');
 
-				}
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+					}
+					?>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	<?php } ?>
 
 </div><!-- #page -->
 

@@ -5,6 +5,9 @@ $section_title = get_sub_field('section_title');
 $section_description = get_sub_field('section_description');
 $section_image = get_sub_field('section_image');
 $section_background = get_sub_field('section_background');
+if ($hero_section == '') {
+    $hero_section = 'reset';
+}
 
     if ( $section_background == true ) {
     	$url = $section_background; ?>

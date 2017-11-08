@@ -92,13 +92,13 @@
 		<h2 class="danzerpress-title" style="">What others think</h2>
 		<p style="text-align: center; font-size: 18px;margin-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed<br> massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
 		<div class="danzerpress-flex-row">
-			<div class="danzerpress-col-1 danzerpress-col-center">
+			<div class="danzerpress-four-fifths danzerpress-col-center">
 
 			 	<div class="danzerpress-flex-row">
 					<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
 						<div class="danzerpress-content wow fadeInUp" style="padding: 40px;background: white;text-align: center;border-radius: 2px;background: #f8f9f9 !important;">
 							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<p style="font-size: 18px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
+							<p style="font-size: 16px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
 							<div class="danzerpress-image-box"><a href=""><img src="https://www.universalmetals.com/wp-content/uploads/2017/07/umnewlogonew.png"></a></div>
 							<h4>John Doe</h4>
 						</div>
@@ -106,7 +106,7 @@
 					<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
 						<div class="danzerpress-content wow fadeInUp" style="padding: 40px;background: white;text-align: center;border-radius: 2px;background: #f8f9f9 !important;">
 							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<p style="font-size: 18px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
+							<p style="font-size: 16px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
 							<div class="danzerpress-image-box"><a href=""><img src="https://theme.danzerpress.com/wp-content/uploads/2017/11/danzerpressofficial2.png"></a></div>
 							<h4>Jane Doe</h4>
 						</div>
@@ -114,7 +114,7 @@
 					<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
 						<div class="danzerpress-content wow fadeInUp" style="padding: 40px;background: white;text-align: center;border-radius: 2px;background: #f8f9f9 !important;">
 							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<p style="font-size: 18px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
+							<p style="font-size: 16px;line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
 							<div class="danzerpress-image-box"><a href=""><img src="http://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png?i=1"></a></div>
 							<h4>Example</h4>
 						</div>
@@ -169,27 +169,61 @@
 				<div class="danzerpress-flex-row">
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/502/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
 					</div>
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/501/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
 					</div>
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/499/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
 					</div>
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/498/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
 					</div>
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/497/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
 					</div>
 					<div class="danzerpress-col-3">
 						<img src="https://unsplash.it/500/496/?random">
-						<h4>Lorem Ipsum</h4>
+						<h4 style="text-align: center;">Lorem Ipsum</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="danzerpress-section" id="">
+	<div class="danzerpress-wrap">
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-four-fifths danzerpress-col-center">
+				<div class="danzerpress-flex-row">
+					<div class="danzerpress-col-2 danzerpress-align-center">
+						<h2 class="danzerpress-title" style="">My Past Work</h2>
+						<p style="text-align: center; font-size: 18px;margin-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
+						<div class="" style="margin:0px;">
+							<p style="text-align: center;"><a href="" class="danzerpress-button-modern">Call to action</a></p>
+						</div>
+					</div>
+					<div class="danzerpress-col-2">
+						<div class="danzerpress-flex-row">
+							<div class="danzerpress-col-2">
+								<img src="https://unsplash.it/500/502/?random">
+							</div>
+							<div class="danzerpress-col-2">
+								<img src="https://unsplash.it/500/501/?random">
+							</div>
+							<div class="danzerpress-col-2">
+								<img src="https://unsplash.it/500/499/?random">
+							</div>
+							<div class="danzerpress-col-2">
+								<img src="https://unsplash.it/500/498/?random">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

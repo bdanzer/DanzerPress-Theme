@@ -67,6 +67,7 @@
 	        	<?php
 	        	//Vars
 	        	$section_name = 'danzerpress-hero-section';
+	        	$hero_section = true;
 	        	include(locate_template('template-parts/content-header.php' )); ?>
 
 					<div class="danzerpress-flex-row">
