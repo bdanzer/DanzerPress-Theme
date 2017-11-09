@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="danzerpress-container-fw">
+	<div id="primary" class="danzerpress-container-fw" style="padding: 40px 0;">
 		<main id="main" class="danzerpress-wrap">
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-main-ws">

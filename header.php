@@ -113,7 +113,7 @@ if ( !is_front_page() ) {
           background-image: linear-gradient(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)), url(<?php echo $url; ?>);
           background-size: cover;
           background-position: 100% 100%;
-          padding: 40px 0;
+          padding: 170px 0;
           background-attachment: fixed;
       }
       .danzerpress-transparent .danzerpress-title-area {

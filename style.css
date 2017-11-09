@@ -1087,9 +1087,11 @@ ol.comment-list {
 ol.children {
     margin: 0;
     padding-left: 0;
-    border-left: 2px solid #05c4eb;
     margin-left: 15px;
     margin-top: 20px;
+}
+li.odd {
+    background: #f8f9f9;
 }
 
 /*--------------------------------------------------------------
