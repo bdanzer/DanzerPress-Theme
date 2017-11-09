@@ -41,7 +41,7 @@
 		$section_is_odd = 0;
 		$section_number = 1;
 
-	$hero_section = '';
+		$hero_section = '';
 
 	 	// loop through the rows of data
 	    while ( have_rows('flexible_layout') ) : the_row();
@@ -169,6 +169,7 @@
 	        if( get_row_layout() == 'icons' ): ?>
 	        	<?php
 	        	//Vars
+	        	$hero_section = false;
 	        	$columns = get_sub_field('number_of_rows');
 
 	        	//Header
