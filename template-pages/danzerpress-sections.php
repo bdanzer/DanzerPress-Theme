@@ -98,6 +98,7 @@
 				<?php 
 				//Vars
 	        	$hero_section = true;
+	        	$section_name = 'danzerpress-hero-section-w-side-image';
 
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?> 
@@ -113,7 +114,7 @@
 								<div id="" class="danzerpress-col-2 danzerpress-flex-row">
 									<div class="danzerpress-align-center">
 										<h2 class="danzerpress-title wow fadeIn" style="color:white !important; text-align: left;"><?php echo $section_title; ?></h2>
-										<p class="wow fadeIn" style="color: white; text-align: left;"><?php echo $section_description; ?></p>
+										<p class="danzerpress-content wow fadeIn" style="color: white; text-align: left;"><?php echo $section_description; ?></p>
 										
 										<?php 
 										//Buttons
@@ -134,6 +135,7 @@
 	        if( get_row_layout() == 'hero_section_no_background' ): ?>
 	        	<?php
 	        	//Vars
+	        	$section_name = 'danzerpress-hero-section-no-background';
 
 
 	        	//Header
@@ -169,12 +171,13 @@
 	        if( get_row_layout() == 'icons' ): ?>
 	        	<?php
 	        	//Vars
+	        	$section_name = 'danzerpress-icons-section';
 	        	$hero_section = false;
 	        	$columns = get_sub_field('number_of_rows');
 
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?> 
-					<h2 id="danzerpress-title-1" class="danzerpress-title" style="margin-bottom: 20px;"><?php echo $section_title; ?></h2>
+					<h2 id="danzerpress-title-1" class="danzerpress-title" style="margin-top: 0px; margin-bottom: 50px;"><?php echo $section_title; ?></h2>
 					<div class="danzerpress-flex-row">
 						<div class="danzerpress-four-fifths danzerpress-col-center">
 
@@ -226,6 +229,7 @@
 	        	<?php
 	        	//Vars
 	        	$columns = get_sub_field('number_of_rows');
+	        	$section_name = 'danzerpress-list-icons-section';
 
 	        	?>
 	        	<style type="text/css">
@@ -385,6 +389,9 @@
 	        // #Long Image Section
 	        if( get_row_layout() == 'long_image_section' ): ?>
 	        	<?php
+	        	//Vars
+	        	$section_name = 'danzerpress-long-image-section';
+
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?>
 					<div class="danzerpress-flex-row">
@@ -408,6 +415,9 @@
 
 	        if( get_row_layout() == 'block_text_section' ): ?>
 	        	<?php
+	        	//Vars
+	        	$section_name = 'danzerpress-block-text-section';
+
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?>
 					<div class="danzerpress-icon-img wow zoomIn">
@@ -422,7 +432,7 @@
 					<?php 
 					//Buttons
 					include(locate_template('template-parts/content-button.php' )); 
-					?> 
+					?>
 				<?php danzerpress_sections_footer(); ?>
 
 	        <?php endif;

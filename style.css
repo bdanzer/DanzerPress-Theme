@@ -504,9 +504,6 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-div#section-1 .danzerpress-button-wrap .danzerpress-button-modern-transparent {
-    color: white !important;
-}
 @media screen and (max-width: 500px) {
     .home p#danzerpress-button-1 {
         text-align: center !important;
@@ -1321,6 +1318,19 @@ input[type="datetime"],
 input[type="datetime-local"], 
 input[type="color"], textarea {
 	width: 100%;
+}
+
+/*DanzerPress Sections*/
+.danzerpress-block-text-section .danzerpress-button-wrap,
+.danzerpress-icons-section .danzerpress-button-wrap {
+    text-align: center;
+}
+.danzerpress-hero-section-w-side-image .danzerpress-button-wrap .danzerpress-button-modern-transparent,
+.danzerpress-hero-section .danzerpress-button-wrap .danzerpress-button-modern-transparent {
+    color: white !important;
+}
+.danzerpress-hero-section-w-side-image .danzerpress-content {
+	font-size: 18px;
 }
 
 /*Footer*/

@@ -13,7 +13,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class( array( "danzerpress-gallery" ) ); ?>>
 		<div class="danzerpress-thumbnail">
         	<?php 
-        		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');
         		$post_link = get_permalink(); 
         	?>
         	<a href="<?php echo $post_link; ?>"><img src="<?php echo $featured_img_url; ?>"></a>
