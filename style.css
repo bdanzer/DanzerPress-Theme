@@ -1,7 +1,7 @@
 /*
 Theme Name: DanzerPress
 Theme URI: https://github.com/bdanzer/DanzerPress-Theme
-Version: 0.9.8
+Version: 0.9.9
 Author: Britt Danzer
 Author URI: https://danzerpress.com
 Description: Description
@@ -1322,7 +1322,8 @@ input[type="color"], textarea {
 
 /*DanzerPress Sections*/
 .danzerpress-block-text-section .danzerpress-button-wrap,
-.danzerpress-icons-section .danzerpress-button-wrap {
+.danzerpress-icons-section .danzerpress-button-wrap,
+.four-image-section .danzerpress-button-wrap {
     text-align: center;
 }
 .danzerpress-hero-section-w-side-image .danzerpress-button-wrap .danzerpress-button-modern-transparent,
@@ -1331,6 +1332,11 @@ input[type="color"], textarea {
 }
 .danzerpress-hero-section-w-side-image .danzerpress-content {
 	font-size: 18px;
+}
+.four-image-section .danzerpress-image-wrap img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
 }
 
 /*Footer*/
