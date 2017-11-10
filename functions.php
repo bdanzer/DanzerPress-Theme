@@ -163,7 +163,6 @@ add_action( 'widgets_init', 'danzerpress_widgets_init' );
  * Enqueue scripts and styles.
  */
 function danzerpress_scripts() {
-	wp_enqueue_style( 'danzerpress-style', get_stylesheet_uri() );
 
 	//wp_enqueue_script( 'danzerpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'danzerpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -196,8 +195,8 @@ function danzerpress_scripts() {
     wp_enqueue_style( 'google fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:400,500,700,800|Roboto', false);
 
     //Fancybox
-    wp_enqueue_script( 'fancybox.js', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
-    wp_enqueue_style( 'fancybox.css', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.css' );
+    wp_enqueue_script( 'fancybox.js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_style( 'fancybox.css', get_template_directory_uri() . '/js/jquery.fancybox.min.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -289,7 +288,7 @@ add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path( $path ) {
  
     // update path
-    $path = get_stylesheet_directory() . '/acf/';
+    $path = get_template_directory() . '/acf/';
     
     // return
     return $path;
@@ -302,7 +301,7 @@ add_filter('acf/settings/dir', 'my_acf_settings_dir');
 function my_acf_settings_dir( $dir ) {
  
     // update path
-    $dir = get_stylesheet_directory_uri() . '/acf/';
+    $dir = get_template_directory_uri() . '/acf/';
     
     // return
     return $dir;
@@ -313,7 +312,7 @@ function my_acf_settings_dir( $dir ) {
 //add_filter('acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
-include_once( get_stylesheet_directory() . '/acf/acf.php' );
+include_once( get_template_directory() . '/acf/acf.php' );
 
 if( function_exists('acf_add_options_page') ) {	
 	acf_add_options_page(array(
@@ -337,7 +336,7 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-include_once( get_stylesheet_directory() . '/inc/theme-options.php' );
+include_once( get_template_directory() . '/inc/theme-options.php' );
 
 /**
  * Function that will automatically update ACF field groups via JSON file update.

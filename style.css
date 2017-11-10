@@ -1,7 +1,7 @@
 /*
 Theme Name: DanzerPress
 Theme URI: https://github.com/bdanzer/DanzerPress-Theme
-Version: 0.9.9
+Version: 0.9.92
 Author: Britt Danzer
 Author URI: https://danzerpress.com
 Description: Description
@@ -1321,9 +1321,18 @@ input[type="color"], textarea {
 }
 
 /*DanzerPress Sections*/
+.danzerpress-section-content h2, 
+.danzerpress-section-content p {
+    text-align: center;
+}
+.danzerpress-image-section .danzerpress-section-content p.image-section-p {
+    font-size: 18px;
+}
+
 .danzerpress-block-text-section .danzerpress-button-wrap,
 .danzerpress-icons-section .danzerpress-button-wrap,
-.four-image-section .danzerpress-button-wrap {
+.four-image-section .danzerpress-button-wrap,
+.simple-gallery-section .danzerpress-button-wrap {
     text-align: center;
 }
 .danzerpress-hero-section-w-side-image .danzerpress-button-wrap .danzerpress-button-modern-transparent,
@@ -1333,10 +1342,47 @@ input[type="color"], textarea {
 .danzerpress-hero-section-w-side-image .danzerpress-content {
 	font-size: 18px;
 }
-.four-image-section .danzerpress-image-wrap img {
-    height: 220px;
+.four-image-section .danzerpress-image-wrap,
+.simple-gallery-section .danzerpress-image-wrap {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+.four-image-section img,
+.simple-gallery-section img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.danzerpress-image-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*Potential DanzerPress-Layouts Changes*/
+.danzerpress-16-9-container {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+}
+.danzerpress-ar-items {
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /*Footer*/

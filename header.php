@@ -94,6 +94,10 @@ if ( !is_front_page() ) {
       $title = get_the_title();
     } elseif ( is_single() ) {
       $title = get_the_title();
+    } elseif ( is_search() ) {
+      $title = 'Search results for: ' . get_search_query();
+    } elseif ( is_404() ) {
+      $title = 'Uh oh, seems you\'re lost';
     }
     echo '
     <div class="danzerpress-title-area">
@@ -103,6 +107,8 @@ if ( !is_front_page() ) {
 
     if (get_the_post_thumbnail_url()) {
       $url = get_the_post_thumbnail_url();
+    } elseif ( is_404() ) {
+      $url = 'https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1633&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
     } else {
       $url = 'https://unsplash.it/1920/1070/?random';
     }

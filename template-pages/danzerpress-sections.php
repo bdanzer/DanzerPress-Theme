@@ -359,14 +359,54 @@
 	        	//Vars
 	        	$section_name = 'danzerpress-image-section';
 
+	        	// get iframe HTML
+	        	if ( get_sub_field('section_video') ) {
+					$iframe = get_sub_field('section_video');
+
+
+					// use preg_match to find iframe src
+					preg_match('/src="(.+?)"/', $iframe, $matches);
+					$src = $matches[1];
+
+
+					// add extra params to iframe src
+					$params = array(
+					    'controls'    => 0,
+					    'showinfo'    => 0,
+					    'rel'		  => 0,
+					);
+
+					$new_src = add_query_arg($params, $src);
+
+					$iframe = str_replace($src, $new_src, $iframe);
+
+
+					// add extra attributes to iframe html
+					$attributes = 'frameborder="0" allowfullscreen';
+
+					$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+
+					// echo $iframe
+					//echo $iframe;
+				}
+				
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?>
 					<div class="danzerpress-flex-row">
 						<div class="danzerpress-col-1 danzerpress-col-center">
 							<div class="danzerpress-flex-row">
 								<div class="danzerpress-col-2 <?php echo $order; ?>">
-									<div class="danzerpress-image-wrap wow <?php echo $wowclass; ?>">
-										<img src="<?php echo $section_image; ?>">
+									<div class="danzerpress-image-wrap danzerpress-16-9-container wow <?php echo $wowclass; ?>">
+
+										<?php 
+										if ( get_sub_field('image_or_video' ) == 'image') {
+											echo'<img class="danzerpress-ar-items" src="' . $section_image . '">';
+										} elseif ( get_sub_field('image_or_video') == 'video' ) {
+											echo $iframe;
+										}
+
+										?>
 									</div>
 								</div>
 								<div class="danzerpress-col-2 danzerpress-flex-row">
@@ -463,7 +503,7 @@
 											$image = get_sub_field('image');
 
 											echo '
-											<div class="danzerpress-col-2 danzerpress-md-2 wow ' . $wowclass . '">
+											<div class="danzerpress-col-2 danzerpress-md-2 wow zoomIn">
 												<div class="danzerpress-image-wrap">
 												<a data-fancybox="four-image-section" href="' . $image . '"><img src="' . $image . '"></a>
 												</div>
@@ -487,6 +527,56 @@
 								</div>
 							</div>
 
+						</div>
+					</div>
+
+				<?php danzerpress_sections_footer(); ?>
+
+	        <?php endif;
+
+	        if( get_row_layout() == 'simple_gallery_section' ): ?>
+	        	<?php
+	        	//Vars
+	        	$section_name = 'simple-gallery-section';
+
+	        	//Header
+	        	include(locate_template('template-parts/content-header.php' )); ?>
+					<div class="danzerpress-flex-row">
+						<div class="danzerpress-two-thirds danzerpress-col-center">
+							<h2 class="danzerpress-title" style=""><?php echo $section_title; ?></h2>
+							<p style="text-align: center; font-size: 18px;margin-bottom: 40px;"><?php echo $section_description; ?></p>
+							
+							<?php 
+								$images = get_sub_field('section_gallery');
+								$size_ml = 'medium_large'; // (thumbnail, medium, large, full or custom size)
+								$size_full = 'full'; // (thumbnail, medium, large, full or custom size)
+
+								if( $images ): ?>
+								    <div class="danzerpress-flex-row">
+								        <?php foreach( $images as $image ): ?>
+								        	<?php
+								        		//vars
+								        		$image_ml = wp_get_attachment_image_url($image['ID'], $size_ml);
+								        		$image_full = wp_get_attachment_image_url($image['ID'], $size_full);
+
+								        	?>
+								        	<div class="danzerpress-col-3 danzerpress-md-2 wow slideInUp">
+												<div class="danzerpress-image-wrap">
+													<a data-fancybox="<?php echo 'simple-gallery-section-' . $section_number; ?>" href="<?php echo $image_full; ?>">
+														<img src="<?php echo $image_ml; ?>">
+													</a>
+												</div>
+												<!-- <h4 style="text-align: center; margin-top: 10px;"><?php echo $image['title'] ?></h4> -->
+											</div>
+								        <?php endforeach; ?>
+								    </div>
+							<?php endif; ?>
+
+							<?php 
+							//Buttons
+							include(locate_template('template-parts/content-button.php' )); 
+							?>
+							
 						</div>
 					</div>
 

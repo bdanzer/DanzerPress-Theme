@@ -151,97 +151,6 @@
 	</div>
 </div>
 
-<div class="danzerpress-section danzerpress-odd" id="">
-	<div class="danzerpress-wrap">
-		
-		<div class="danzerpress-flex-row">
-			<div class="danzerpress-two-thirds danzerpress-col-center">
-				<h2 class="danzerpress-title" style="">My Past Work</h2>
-				<p style="text-align: center; font-size: 18px;margin-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed<br> massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
-				<div class="danzerpress-flex-row">
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/502/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/501/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/499/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/498/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/497/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-					<div class="danzerpress-col-3 danzerpress-md-2">
-						<div class="danzerpress-image-wrap">
-							<img src="https://unsplash.it/500/496/?random">
-						</div>
-						<h4 style="text-align: center; margin-top: 10px;">Lorem Ipsum</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="danzerpress-section" id="">
-	<div class="danzerpress-wrap">
-		<div class="danzerpress-flex-row">
-			<div class="danzerpress-four-fifths danzerpress-col-center">
-				<div class="danzerpress-flex-row">
-					<div class="danzerpress-col-2 danzerpress-order-1">
-						<div class="danzerpress-flex-row">
-							<div class="danzerpress-col-2 danzerpress-md-2 wow fadeInRight">
-								<div class="danzerpress-image-wrap">
-								<a data-fancybox="sample" href="http://localhost:8888/danzerpress-live-environment/wp-content/uploads/2017/11/download-1.jpeg"><img src="http://localhost:8888/danzerpress-live-environment/wp-content/uploads/2017/11/download-1.jpeg"></a>
-								</div>
-							</div>
-							<div class="danzerpress-col-2 danzerpress-md-2 wow fadeInRight">
-								<div class="danzerpress-image-wrap">
-								<a data-fancybox="sample" href="https://unsplash.it/1920/1080/?random"><img src="https://unsplash.it/500/501/?random"></a>
-								</div>
-							</div>
-							<div class="danzerpress-col-2 danzerpress-md-2 wow fadeInRight">
-								<div class="danzerpress-image-wrap">
-								<a data-fancybox="sample" href="https://unsplash.it/1920/1080/?random"><img src="https://unsplash.it/500/499/?random"></a>
-								</div>
-							</div>
-							<div class="danzerpress-col-2 danzerpress-md-2 wow fadeInRight">
-								<div class="danzerpress-image-wrap">
-								<a data-fancybox="sample" href="https://unsplash.it/1920/1080/?random"><img src="https://unsplash.it/500/498/?random"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="danzerpress-col-2 danzerpress-align-center">
-						<h2 class="danzerpress-title" style="">My Past Work</h2>
-						<p style="text-align: center; font-size: 18px;margin-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed massa aliquam porta. Ut vitae pharetra diam. Proin sed nisl eget dolor aliquet sollicitudin.</p>
-						<div class="" style="margin:0px;">
-							<p style="text-align: center;"><a href="" class="danzerpress-button-modern">Call to action</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <div class="danzerpress-section danzerpress-odd" id="">
 	<div class="danzerpress-wrap">
@@ -258,6 +167,25 @@
 					<div class="danzerpress-col-3 danzerpress-md-2">
 						<div class="danzerpress-image-wrap"><img src="https://danzerpress.com/wp-content/uploads/2016/12/xsharpescout300x300.png.pagespeed.ic.01IezkbszF.webp"></div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	iframe {
+	    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.45);
+	}
+</style>
+
+<div class="danzerpress-section" id="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">Sites Worked On</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-two-thirds danzerpress-col-center">
+				<div class="danzerpress-16-9-container">
+					<iframe class="danzerpress-ar-items" src="https://www.youtube.com/embed/9ElaH0VmRFQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>

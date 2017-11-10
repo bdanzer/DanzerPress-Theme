@@ -9,21 +9,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="danzerpress-container-fw" style="padding-top: 40px;">
+	<div id="primary" class="danzerpress-container-fw" style="padding: 40px 0;">
 		<main id="main" class="danzerpress-wrap">
 
 			<?php
 			if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="danzerpress-title"><?php
-						/* translators: %s: search query. */
-						printf( esc_html__( 'Search Results for: %s', 'danzerpress' ), '<span>' . get_search_query() . '</span>' );
-					?></h1>
-				</header><!-- .page-header -->
-
 			<div class="danzerpress-flex-row">
-				<div class="danzerpress-two-thirds">
+				<div class="danzerpress-col-1">
+					<div class="danzerpress-flex-row">
 					<?php
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
@@ -38,7 +32,7 @@ get_header(); ?>
 					endwhile;
 
 					the_posts_navigation(); ?>
-
+					</div>
 				</div>
 
 				<?php
@@ -48,9 +42,6 @@ get_header(); ?>
 
 				endif; ?>
 
-				<div class="danzerpress-one-third">
-					<?php get_sidebar(); ?>
-				</div>
 			</div>
 
 		</main><!-- #main -->
