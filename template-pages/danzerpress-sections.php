@@ -27,6 +27,9 @@
 				    display: flex;
 				    flex-direction: column;
 				}
+				.home.danzerpress-non-transparent #section-1 {
+					height: calc(100vh - 64px);
+				}
 			</style>
 		<?php
 		}

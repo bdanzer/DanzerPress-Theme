@@ -83,6 +83,55 @@ if ( ! function_exists( 'danzerpress_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'danzerpress_setup' );
 
+
+/**
+ * Add a widget to the dashboard.
+ *
+ * This function is hooked into the 'wp_dashboard_setup' action below.
+ */
+
+add_action( 'wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+function example_dashboard_widget_function() {
+
+	// Display whatever it is you want to show.
+	echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/G7Tim7p8itM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+}
+
+function example_add_dashboard_widgets() {
+ 	wp_add_dashboard_widget( 'example_dashboard_widget', '<img style="height: 60px; width: auto; display: block;" src="http://localhost:8888/danzerpress-live-environment/wp-content/uploads/2017/11/danzerpressofficial2.png"><span>DanzerPress Theme Instructions</span>', 'example_dashboard_widget_function' );
+ 	
+ 	// Globalize the metaboxes array, this holds all the widgets for wp-admin
+ 	global $wp_meta_boxes;
+ 	
+ 	// Get the regular dashboard widgets array 
+ 	// (which has our new widget already but at the end)
+ 	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+ 	
+ 	// Backup and delete our new dashboard widget from the end of the array
+ 	$example_widget_backup = array( 'example_dashboard_widget' => $normal_dashboard['example_dashboard_widget'] );
+ 	unset( $normal_dashboard['example_dashboard_widget'] );
+ 
+ 	// Merge the two arrays together so our widget is at the beginning
+ 	$sorted_dashboard = array_merge( $example_widget_backup, $normal_dashboard );
+ 
+ 	// Save the sorted array back into the original metaboxes 
+ 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
+} 
+
+function remove_dashboard_meta() {
+        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+        //remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+        //remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
+}
+add_action( 'admin_init', 'remove_dashboard_meta' );
+
 //add update support
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(

@@ -100,7 +100,7 @@ if ( !is_front_page() ) {
       $title = 'Uh oh, seems you\'re lost';
     }
     echo '
-    <div class="danzerpress-title-area">
+    <div class="danzerpress-title-area" style="display: flex;align-items: center;justify-content: center;">
       <h1 class="danzerpress-title">' . $title . '</h1>
     </div>
     ';
@@ -121,6 +121,25 @@ if ( !is_front_page() ) {
           background-position: 100% 100%;
           padding: 170px 0;
           background-attachment: fixed;
+          <?php
+          if ( get_field('full_screen_title_area', 'option') === true ) {
+            echo 'height: 100vh;';
+          }
+
+          if (get_field('title_section_color', 'option')) {
+            echo 'background:' . get_field('title_section_color', 'option') . ';';
+          }
+
+          if ( get_field('title_section_padding', 'option') ) {
+            echo get_field('title_section_padding', 'option');
+          } else {
+            echo 'padding: 170px 0;';
+          }
+   
+          ?>
+      }
+      .danzerpress-non-transparent .danzerpress-title-area {
+          height: calc(100vh - 60px) !important;
       }
       .danzerpress-transparent .danzerpress-title-area {
           background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)), url(<?php echo $url; ?>);
@@ -129,9 +148,30 @@ if ( !is_front_page() ) {
           padding: 170px 0;
           background-attachment: fixed;
           margin-top: -62px;
+          <?php
+          if ( get_field('full_screen_title_area', 'option') === true ) {
+            echo 'height: 100vh;';
+          }
+
+          if (get_field('title_section_color', 'option')) {
+            echo 'background:' . get_field('title_section_color', 'option') . ';';
+          }
+
+          if ( get_field('title_section_padding', 'option') ) {
+            echo get_field('title_section_padding', 'option');
+          }
+   
+          ?>
+      }
+
+      @media screen and (max-width: 768px) {
+          .danzerpress-title-area {
+              background-attachment: fixed;
+              background-position: 50% 67% !important;
+              background-attachment: scroll !important;
+          }
       }
     </style>
   <?php }
-
 ?>
 
