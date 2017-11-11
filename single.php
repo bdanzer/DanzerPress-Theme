@@ -40,7 +40,9 @@ get_header(); ?>
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 700;'><span style='margin-bottom: 5px;'>Previous:</span><span style='font-size:18px;'>%title</span></p>", TRUE); ?>
+    font-weight: 700;
+    border: 1px solid #201927;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);'><span style='margin-bottom: 5px;'>Previous:</span><span style='font-size:18px;'>%title</span></p>", TRUE); ?>
 				</div>
 				
 				<?php } $nextPost = get_next_post(true);
@@ -59,7 +61,9 @@ get_header(); ?>
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 700;'><span style='margin-bottom: 5px;'>Next:</span><span style='font-size:18px;'>%title</span></p>", TRUE); ?>
+    font-weight: 700;
+    border: 1px solid #201927;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);'><span style='margin-bottom: 5px;'>Next:</span><span style='font-size:18px;'>%title</span></p>", TRUE); ?>
 				</div>
 		<?php } ?>
 	</div><!--#cooler-nav div -->
