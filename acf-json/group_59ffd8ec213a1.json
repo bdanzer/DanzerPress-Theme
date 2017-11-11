@@ -1,6 +1,6 @@
 {
     "key": "group_59ffd8ec213a1",
-    "title": "Home Page",
+    "title": "General Theme Settings",
     "fields": [
         {
             "key": "field_59ffd8f3324ec",
@@ -15,11 +15,80 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Check for fullscreen",
-            "default_value": 1,
+            "message": "Check for Full screen hero section",
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5a0677e93682d",
+            "label": "Full screen page title",
+            "name": "full_screen_title_area",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59ffd8f3324ec",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check for full screen title sections",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a067af808e91",
+            "label": "Title Section Padding",
+            "name": "title_section_padding",
+            "type": "text",
+            "instructions": "This field supports a custom css rule. Type a css padding rule like:\r\n\r\npadding: 50px 0 40px;",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a0677e93682d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "padding: 170px 0;",
+            "placeholder": "padding: 170px 0;",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a067c52981ac",
+            "label": "Title Section Color",
+            "name": "title_section_color",
+            "type": "color_picker",
+            "instructions": "Choose a color to override. IF YOU CHANGE THIS THE THUMBNAIL PICTURE WILL BE GONE.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         }
     ],
     "location": [
@@ -39,5 +108,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510208018
+    "modified": 1510389330
 }
