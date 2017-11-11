@@ -89,7 +89,6 @@ add_action( 'after_setup_theme', 'danzerpress_setup' );
  *
  * This function is hooked into the 'wp_dashboard_setup' action below.
  */
-
 add_action( 'wp_dashboard_setup', 'example_add_dashboard_widgets' );
 
 function example_dashboard_widget_function() {
@@ -121,15 +120,15 @@ function example_add_dashboard_widgets() {
 } 
 
 function remove_dashboard_meta() {
-        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-        //remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-        //remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+    //remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+    //remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
 
@@ -251,10 +250,6 @@ function danzerpress_scripts() {
     wp_enqueue_script( 'fancybox.js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_style( 'fancybox.css', get_template_directory_uri() . '/js/jquery.fancybox.min.css' );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
 	// Danzerpress Scroll to fix
     // wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
 
@@ -263,6 +258,10 @@ function danzerpress_scripts() {
 	wp_enqueue_script( 'waypoints-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js', array(), null, true );
 	wp_enqueue_script( 'danzerpress-js', get_template_directory_uri() . '/js/danzerpress.js', array('jquery'), null, true );
 	wp_enqueue_script( 'waypoints-debug', get_template_directory_uri() . '/js/waypoints.debug.js', array(), null, true  );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'danzerpress_scripts' );
@@ -333,6 +332,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * DanzerPress Sections functions
  */
 require get_template_directory() . '/inc/danzerpress-sections-functions.php';
+
+/**
+ * DanzerPress show current template
+ */
+require get_template_directory() . '/show-current-template/show-current-template.php';
 
 
 // 1. customize ACF path
