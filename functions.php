@@ -95,7 +95,8 @@ add_action( 'wp_dashboard_setup', 'example_add_dashboard_widgets' );
 function example_dashboard_widget_function() {
 
 	// Display whatever it is you want to show.
-	echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/G7Tim7p8itM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+	//echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/G7Tim7p8itM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+	echo 'There will be an explaination video added here soon!';
 }
 
 function example_add_dashboard_widgets() {
