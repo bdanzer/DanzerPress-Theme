@@ -13,11 +13,11 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
 
 
 </head>
@@ -48,7 +48,7 @@ if (get_field('navigation_style', 'option') == 'transparent') {
 
 <body <?php body_class( $danzerpress_body ); ?>>
   <header class="drawer-navbar drawer-navbar--fixed <?php foreach ($danzerpress_navigation as $value) { echo $value; } ?>" role="banner">
-  	<?php
+    <?php
     if(is_active_sidebar('emergency-header')){
     
       dynamic_sidebar('emergency-header');
@@ -58,12 +58,12 @@ if (get_field('navigation_style', 'option') == 'transparent') {
     <div class="drawer-container">
       <div class="drawer-navbar-header">
         <?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) : ?>
-					<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
-				<?php else : ?>
-					<!-- <a class="drawer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
-				<?php endif;?>
+        the_custom_logo();
+        if ( is_front_page() && is_home() ) : ?>
+          <!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+        <?php else : ?>
+          <!-- <a class="drawer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
+        <?php endif;?>
         <button type="button" class="drawer-toggle drawer-hamburger">
           <span class="sr-only">toggle navigation</span>
           <span class="drawer-hamburger-icon"></span>
@@ -71,17 +71,17 @@ if (get_field('navigation_style', 'option') == 'transparent') {
       </div>
       <nav class="drawer-nav" role="navigation">
         <?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'danzerpress-right',
-				) );
-			?>
+        wp_nav_menu( array(
+          'theme_location' => 'menu-1',
+          'menu_id'        => 'primary-menu',
+          'menu_class'     => 'danzerpress-right',
+        ) );
+      ?>
       </nav>
     </div>
   </header>
 
-	<div id="content" class="site-content">
+  <div id="content" class="site-content">
 
 <?php
 
@@ -138,9 +138,15 @@ if ( !is_front_page() ) {
    
           ?>
       }
-      .danzerpress-non-transparent .danzerpress-title-area {
-          height: calc(100vh - 60px) !important;
-      }
+
+      <?php
+      if ( get_field('full_screen_title_area', 'option') === true ) {
+            echo '.danzerpress-non-transparent .danzerpress-title-area {
+                      height: calc(100vh - 60px) !important;
+                  }';
+          }
+      ?>
+
       .danzerpress-transparent .danzerpress-title-area {
           background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)), url(<?php echo $url; ?>);
           background-size: cover;
@@ -174,4 +180,3 @@ if ( !is_front_page() ) {
     </style>
   <?php }
 ?>
-
