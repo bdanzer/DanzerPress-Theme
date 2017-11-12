@@ -598,12 +598,26 @@
 
 	    endwhile;
 
-	else :
+	else : ?>
 
-	    // no layouts found
-	    echo "no layouts";
+	    <div class="danzerpress-wrap" style="padding-top: 40px;">
+	    	<div class="danzerpress-two-thirds danzerpress-col-center">
+	    		<div class="danzerpress-box danzerpress-white">
+		    		<h4 style="text-align: center;">DanzerPress Setup!</h4>
+		    		<p>Looks like you don't have a few things set up yet to show something here. Follow these steps to get started:</p>
+		    		<ol>
+		    			<li>Go to WordPress Dashbard.</li>
+		    			<li>Go to pages.</li>
+		    			<li>Create a new page called home.</li>
+		    			<li>On that same page below the update button set the template to: DanzerPress Sections.</li>
+		    			<li>Click add row on the new box that shows up and you can choose which section you want to use. Most commonly you'd use "hero section"</li>
+		    			<li>Any other issues you can contact me at help@danzerpress.com</li>
+		    		</ol>
+		    	</div>
+	    	</div>
+	    </div>
 
-	endif;
+	<?php endif;
 
 	?>
 

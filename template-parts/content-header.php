@@ -10,7 +10,7 @@ if ($hero_section == '') {
 }
 
     if ( $section_background == true ) {
-    	$url = $section_background; ?>
+        $url = $section_background; ?>
         <style type="text/css">
         .danzerpress-background-<?php echo $section_number; ?> {
             background-image: url(<?php echo $url; ?>) !important;
@@ -34,7 +34,7 @@ if ($hero_section == '') {
         </style>
     <?php
     } elseif ($hero_section === true) {
-    	$url = 'https://unsplash.it/1920/1080/?random';?>
+        $url = 'https://unsplash.it/1920/1080/?random';?>
         <style type="text/css">
         .danzerpress-background-<?php echo $section_number; ?> {
             background-image: url(<?php echo $url; ?>) !important;
@@ -60,7 +60,7 @@ if ($hero_section == '') {
         $hero_section = 'reset';
     }
 
-if (!$section_image) {
+if (!$section_image && $section_name == 'image_section' ) {
     $section_image = 'https://unsplash.it/1920/1080/?random';
 }
 
