@@ -600,12 +600,31 @@
 
 	else : ?>
 
+		<style type="text/css">
+			.home-content,
+			.page-content {
+				display: none;
+			}
+		</style>
 	    <div class="danzerpress-wrap" style="padding-top: 40px;">
 	    	<div class="danzerpress-two-thirds danzerpress-col-center">
 	    		<div class="danzerpress-box danzerpress-white">
 		    		<h4 style="text-align: center;">DanzerPress Setup!</h4>
 		    		<p>Looks like you don't have a few things set up yet to show something here. Follow these steps to get started:</p>
-		    		<ol>
+		    		<h4 style="text-align: center;">Select what you need help to set up</h4>
+		    		<p style="text-align: center;">
+		    			<a id="home" class="danzerpress-button-modern danzerpress-button-left">Home Page</a>
+		    			<a id="page" class="danzerpress-button-modern">page</a>
+		    		</p>
+		    		<ol class="home-content danzerpress-box">
+		    			<li>Go to WordPress Dashbard.</li>
+		    			<li>Go to pages.</li>
+		    			<li>Create a new page called home.</li>
+		    			<li>On that same page below the update button set the template to: DanzerPress Sections.</li>
+		    			<li>Click add row on the new box that shows up and you can choose which section you want to use. Most commonly you'd use "hero section"</li>
+		    			<li>Any other issues you can contact me at help@danzerpress.com</li>
+		    		</ol>
+		    		<ol class="page-content danzerpress-box">
 		    			<li>Go to WordPress Dashbard.</li>
 		    			<li>Go to pages.</li>
 		    			<li>Create a new page called home.</li>
@@ -616,6 +635,17 @@
 		    	</div>
 	    	</div>
 	    </div>
+
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+			  $("#home").click(function() {
+			    $(".home-content").slideToggle();
+			  });
+			  $("#page").click(function() {
+			    $(".page-content").slideToggle();
+			  });
+			});
+	    </script>
 
 	<?php endif;
 

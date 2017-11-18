@@ -5,9 +5,11 @@ $section_title = get_sub_field('section_title');
 $section_description = get_sub_field('section_description');
 $section_image = get_sub_field('section_image');
 $section_background = get_sub_field('section_background');
-if ($hero_section == '') {
-    $hero_section = 'reset';
-}
+$section_background_color = get_sub_field('background_color');
+$sections_with_background = array(
+        'danzerpress-hero-section',
+        'danzerpress-hero-section-w-side-image'
+    );
 
     if ( $section_background == true ) {
         $url = $section_background; ?>
@@ -33,7 +35,14 @@ if ($hero_section == '') {
         }
         </style>
     <?php
-    } elseif ($hero_section === true) {
+    } elseif ($section_background_color == true) { ?>
+        <style type="text/css">
+        .danzerpress-background-<?php echo $section_number; ?> {
+            background: <?php echo $section_background_color; ?> !important;
+        }
+        </style>
+        <?php 
+    } elseif (in_array( $section_name, $sections_with_background )) {
         $url = 'https://unsplash.it/1920/1080/?random';?>
         <style type="text/css">
         .danzerpress-background-<?php echo $section_number; ?> {
@@ -57,7 +66,6 @@ if ($hero_section == '') {
         }
         </style>
         <?php 
-        $hero_section = 'reset';
     }
 
 if (!$section_image && $section_name == 'image_section' ) {
@@ -82,5 +90,4 @@ if ( $image_side == 'right' ) {
 <div class="danzerpress-wrap">
 
 <?php
-$section_name = '';
 ?>

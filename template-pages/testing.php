@@ -192,4 +192,56 @@
 	</div>
 </div>
 
+<style type="text/css">
+.video-background {
+  background: #000;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 0;
+  display: flex;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.video-text {
+	z-index: 222222;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+</style>
+<div class="danzerpress-section" id="" style="position: relative; position: relative; height: calc(100vh - 60px);">
+	<div class="video-background">
+	    <div class="video-foreground">
+	      <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+	    </div>
+	    <div class="video-text">
+	    	<div class="danzerpress-flex-row">
+	    		<div class="danzerpress-two-thirds danzerpress-col-center danzerpress-align-center" style="margin:0px;">
+					<h2 class="danzerpress-title" style="margin-bottom: 20px; color: white !important;">What others think</h2>
+					<p style="text-align: center; font-size: 21px;margin-bottom: 40px;line-height: 36px;color: white !important;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Nulla vitae magna sed</p>
+					<p style="text-align: center;"><a href="" class="danzerpress-button-modern">Call to action</a></p>
+				</div>
+	    	</div>
+	    </div>
+  	</div>
+</div>
+
+
+
 <?php get_footer(); ?>
