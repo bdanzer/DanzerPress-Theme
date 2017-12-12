@@ -577,6 +577,30 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5a2f71bcec513",
+                            "label": "Section Icon",
+                            "name": "section_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "full",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_59fa7e347ab84",
                             "label": "Section Title",
                             "name": "section_title",
@@ -2076,5 +2100,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1510978439
+    "modified": 1513058786
 }

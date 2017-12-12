@@ -68,7 +68,7 @@ $sections_with_background = array(
         <?php 
     }
 
-if (!$section_image && $section_name == 'image_section' ) {
+if (!$section_image && $section_name == 'danzerpress-image-section' || !$section_image && $section_name == 'danzerpress-hero-section-w-side-image' ) {
     $section_image = 'https://unsplash.it/1920/1080/?random';
 }
 

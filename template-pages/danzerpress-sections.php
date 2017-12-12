@@ -149,14 +149,14 @@
 							if ($section_image) {
 								echo 
 								'
-								<div class="danzerpress-icon-img">
+								<div class="danzerpress-icon-img wow zoomIn">
 									<img src="' . $section_image . '">
 								</div>
 								';
 							}
 
 							?>
-							<div id="" class="danzerpress-section-content animated fadeIn">
+							<div id="" class="danzerpress-section-content wow fadeIn">
 								<h2 class="danzerpress-title" style=""><?php echo $section_title; ?></h2>
 								<p class="danzerpress-hero-p" style="text-align: center; font-size: 20px;"><?php echo $section_description; ?></p>
 								<?php 
@@ -180,6 +180,17 @@
 
 	        	//Header
 	        	include(locate_template('template-parts/content-header.php' )); ?> 
+	        		<?php
+					if ($section_image) {
+						echo 
+						'
+						<div class="danzerpress-icon-img wow zoomIn">
+							<img src="' . $section_image . '">
+						</div>
+						';
+					}
+
+					?>
 					<h2 id="danzerpress-title-1" class="danzerpress-title" style="margin-top: 0px; margin-bottom: 50px;"><?php echo $section_title; ?></h2>
 					<div class="danzerpress-flex-row">
 						<div class="danzerpress-four-fifths danzerpress-col-center">
