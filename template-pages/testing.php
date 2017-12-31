@@ -243,5 +243,80 @@
 </div>
 
 
+<div class="danzerpress-section danzerpress-odd" id="" style="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">What others think</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-four-fifths danzerpress-col-center">
+
+				<div class="danzerpress-flex-row">
+					<?php
+					/* Start the Loop */
+					$args = array( 'post_type' => 'post', 'posts_per_page' => 2, 'category_name' => '');
+					$loop = new WP_Query ( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();
+
+					?>
+					<div class="danzerpress-col-2">
+						<div class="danzerpress-flex-row">
+							<div class="danzerpress-col-2-fix danzerpress-zero danzerpress-recent-post-section wow zoomIn">
+								<img class="" src="<?php echo get_the_post_thumbnail_url(); ?>">
+							</div>
+
+							<div class="danzerpress-col-2-fix danzerpress-zero danzerpress-white wow fadeInUp">
+								<div class="danzerpress-box">
+									<h2><?php the_title(); ?></h2>
+									<p><?php the_excerpt(); ?></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php endwhile; 
+					wp_reset_postdata();
+
+					?>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="danzerpress-section danzerpress-team-member-section" id="" style="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">Team Members</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-four-fifths danzerpress-col-center" style="">
+
+				<div class="danzerpress-flex-row">
+
+					<div class="danzerpress-flex-row">
+						<div class="danzerpress-one-third-fix danzerpress-team-member-image danzerpress-zero">
+							<img class="wow fadeInLeft" src="<?php echo get_the_post_thumbnail_url(); ?>">
+						</div>
+
+						<div class="danzerpress-two-thirds-fix danzerpress-zero danzerpress-white wow fadeInUp" style="background: #f8f9f9 !important;">
+							<div class="danzerpress-box">
+								<h2 style="margin-bottom: 0px;"><?php the_title(); ?></h2>
+								<h4 style="margin-bottom: 20px;">Job Title</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna sed</p>
+								<p>
+									<a href=""><i class="fa fa-facebook"></i></a>
+									<a href=""><i class="fa fa-twitter"></i></a>
+									<a href=""><i class="fa fa-instagram"></i></a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 <?php get_footer(); ?>

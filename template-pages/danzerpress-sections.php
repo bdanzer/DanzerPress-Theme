@@ -53,8 +53,10 @@
 
 	   	if ($section_is_odd == 1) {
 	   		$section_class = 'danzerpress-odd';
+	   		$danzerpressColor = 'danzerpress-white';
 	   	} else {
 	   		$section_class = '';
+	   		$danzerpressColor = 'danzerpress-grey';
 	   	}
 	    	
 
@@ -593,6 +595,222 @@
 							
 						</div>
 					</div>
+
+				<?php danzerpress_sections_footer(); ?>
+
+	        <?php endif;
+
+	        if( get_row_layout() == 'team_member_section' ): ?>
+	        	<?php
+	        	//Vars
+	        	$section_name = 'team-member-section';
+
+	        	//Header
+	        	include(locate_template('template-parts/content-header.php' )); ?>
+	        		<h2 class="danzerpress-title" style="margin-bottom: 40px;"><?php echo $section_title; ?></h2>
+					<div class="danzerpress-flex-row">
+						<div class="danzerpress-four-fifths danzerpress-col-center" style="">
+
+							<div class="danzerpress-flex-row">
+
+								<?php 
+								// check if the nested repeater field has rows of data
+					        	if( have_rows('team_members') ):
+
+								 	echo '<div class="danzerpress-flex-row">';
+
+								 	// loop through the rows of data
+								    while ( have_rows('team_members') ) : the_row();
+
+										// vars
+										$section_image = get_sub_field('section_image');
+							        	$job_name = get_sub_field('job_name');
+							        	$job_title = get_sub_field('job_title');
+							        	$section_description = get_sub_field('section_description'); ?>
+
+										<div class="danzerpress-one-third-fix danzerpress-team-member-image danzerpress-zero">
+											<img class="wow fadeInLeft" src="<?php echo $section_image; ?>">
+										</div>
+
+										<div class="danzerpress-two-thirds-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
+											<div class="danzerpress-box">
+												<h2 style="margin-bottom: 0px;"><?php echo $job_name ?></h2>
+												<h4 style="margin-bottom: 20px;"><?php echo $job_title; ?></h4>
+												<p><?php echo $section_description; ?></p>
+												<p>
+													<?php 
+													// check if the nested repeater field has rows of data
+										        	if( have_rows('social_media') ):
+
+													 	echo '<div class="danzerpress-flex-row">';
+
+													 	// loop through the rows of data
+													    while ( have_rows('social_media') ) : the_row();
+
+															// vars
+															$socialLink = get_sub_field('social_media_link');
+															$socialMediaNetwork = get_sub_field('social_media_network');
+
+															echo '
+																<a href="' . $socialLink . '"><i class="fa fa-' . $socialMediaNetwork . '"></i></a>
+															';
+
+														endwhile;
+
+														echo '</div>';
+
+													endif; ?>
+
+												</p>
+											</div>
+										</div>
+
+									<?php endwhile;
+
+									echo '</div>';
+
+								endif; ?>
+								
+							</div>
+
+							<?php 
+							//Buttons
+							include(locate_template('template-parts/content-button.php' )); 
+							?>
+
+						</div>
+					</div>
+
+				<?php danzerpress_sections_footer(); ?>
+
+	        <?php endif;
+
+	        if( get_row_layout() == 'recent_post_section' ): ?>
+	        	<?php
+	        	//Vars
+	        	$section_name = 'recent_post_section';
+
+	        	//Header
+	        	include(locate_template('template-parts/content-header.php' )); ?>
+	        		
+	        		<h2 class="danzerpress-title" style="margin-bottom: 40px;"><?php echo $section_title; ?></h2>
+					<div class="danzerpress-flex-row">
+						<div class="danzerpress-four-fifths danzerpress-col-center">
+
+							<div class="danzerpress-flex-row">
+								<?php
+								/* Vars */
+								$post_type = get_sub_field('custom_post_type');
+								$posts_per_page = get_sub_field('number_of_posts');
+								$category_name = get_sub_field('category_to_display');
+
+								/* Start the Loop */
+								$args = array( 
+									'post_type' => 'post',
+									'posts_per_page' => $posts_per_page,
+									'category_name' => $category_name
+								);
+								$loop = new WP_Query ( $args );
+								while ( $loop->have_posts() ) : $loop->the_post();
+
+								?>
+								<div class="danzerpress-col-2">
+									<div class="danzerpress-flex-row">
+										<div class="danzerpress-col-2-fix danzerpress-zero danzerpress-recent-post-section wow zoomIn">
+											<img class="" src="<?php echo get_the_post_thumbnail_url(); ?>">
+										</div>
+
+										<div class="danzerpress-col-2-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
+											<div class="danzerpress-box">
+												<h2><?php the_title(); ?></h2>
+												<p><?php the_excerpt(); ?></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php endwhile; 
+								wp_reset_postdata();
+
+								?>
+							</div>
+
+							<?php 
+							//Buttons
+							include(locate_template('template-parts/content-button.php' )); 
+							?>
+
+						</div>
+					</div>
+
+				<?php danzerpress_sections_footer(); ?>
+
+	        <?php endif;
+
+	        if( get_row_layout() == 'testimonial_section' ): ?>
+	        	<?php
+	        	//Vars
+	        	$section_name = 'testimonial-section';
+
+	        	//Header
+	        	include(locate_template('template-parts/content-header.php' )); ?>
+	        		
+	        		<h2 class="danzerpress-title" style=""><?php echo $section_title; ?></h2>
+					<p style="text-align: center; font-size: 18px;margin-bottom: 40px;"><?php echo $section_description; ?></p>
+					<div class="danzerpress-flex-row">
+						<div class="danzerpress-four-fifths danzerpress-col-center">
+
+						 	<div class="danzerpress-flex-row">
+						 		<?php 
+								// check if the nested repeater field has rows of data
+					        	if( have_rows('testimonial_blocks') ):
+
+								 	echo '<div class="danzerpress-flex-row">';
+
+								 	// loop through the rows of data
+								    while ( have_rows('testimonial_blocks') ) : the_row();
+
+										// vars
+										$testimonialStars = get_sub_field('testimonial_stars');
+										$testimonialContent = get_sub_field('testimonial_content');
+										$testimonialImage = get_sub_field('testimonial_image');
+										$testimonialName = get_sub_field('testimonial_name');
+
+									
+
+										echo '
+											<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
+												<div class="danzerpress-content wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">
+													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+													<p style="font-size: 16px;line-height: 28px;">' . $testimonialContent . '</p>
+													<div class="danzerpress-image-box"><a href=""><img src="' . $testimonialImage . '"></a></div>
+													<h4>' . $testimonialName . '</h4>
+												</div>
+											</div>
+										';
+
+									endwhile;
+
+									echo '</div>';
+
+								endif; ?>
+							</div>
+
+						</div>
+					</div>
+
+				<?php danzerpress_sections_footer(); ?>
+
+	        <?php endif;
+
+	        if( get_row_layout() == 'slider_revolution_section' ): ?>
+	        	<?php
+	        	//Vars
+	        	$section_name = 'slider-revolution-section';
+
+	        	//Header
+	        	include(locate_template('template-parts/content-header.php' )); ?>
+		        	
+		        	<?php echo do_shortcode($section_description); ?>
 
 				<?php danzerpress_sections_footer(); ?>
 
