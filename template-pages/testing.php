@@ -317,6 +317,54 @@
 	</div>
 </div>
 
+<div class="danzerpress-section danzerpress-odd" id="" style="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">FAQ</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-four-fifths danzerpress-col-center" style="">
+
+				<div class="danzerpress-flex-row">
+					<div class="danzerpress-two-thirds danzerpress-col-center">
+
+						<button class="danzerpress-accordion"><h4>What do we accomplish?</h4></button>
+						<div class="danzerpress-panel">
+						  <p class="danzerpress-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus lacus ac purus pharetra, nec dictum magna fermentum. Suspendisse viverra, risus eu cursus tempor, diam libero congue ligula, et gravida tellus arcu quis leo. Sed ullamcorper ultrices metus id vestibulum. </p>
+						</div>
+
+						<button class="danzerpress-accordion"><h4>Section 2</h4></button>
+						<div class="danzerpress-panel">
+						  <p class="danzerpress-box">Lorem ipsum...</p>
+						</div>
+
+						<button class="danzerpress-accordion"><h4>Section 3</h4></button>
+						<div class="danzerpress-panel">
+						  <p class="danzerpress-box">Lorem ipsum...</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("danzerpress-accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 
 <?php get_footer(); ?>

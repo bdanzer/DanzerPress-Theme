@@ -1,7 +1,7 @@
 /*
 Theme Name: DanzerPress
 Theme URI: https://github.com/bdanzer/DanzerPress-Theme
-Version: 1.0.0
+Version: 1.0.1
 Author: Britt Danzer
 Author URI: https://danzerpress.com
 Description: This theme was developed to add more flexibility to creating websites and keeping it light. Most themes come with way too many settings than you need. Thus why I created this simple light theme that has powerful capabilities.
@@ -1368,6 +1368,9 @@ input[type="color"], textarea {
     height: 100%;
     width: 100%;
 }
+.recent_post_section h2 {
+    line-height: 1.5;
+}
 .danzerpress-recent-post-section img,
 .danzerpress-team-member-section img {
     height: 100%;
@@ -1399,6 +1402,58 @@ div.slider-revolution-section {
 }
 .slider-revolution-section .danzerpress-wrap {
     width: 100%;
+}
+.rev_slider iframe {
+    border: none;
+}
+
+/*Faq Section*/
+/* Style the buttons that are used to open and close the danzerpress-accordion panel */
+.danzerpress-accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.accordian h4 {
+	margin: 0px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .danzerpress-accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the danzerpress-accordion panel. Note: hidden by default */
+.danzerpress-panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 20px;
+}
+.danzerpress-accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /*Potential DanzerPress-Layouts Changes*/
