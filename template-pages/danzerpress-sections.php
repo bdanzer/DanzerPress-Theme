@@ -617,7 +617,7 @@
 								// check if the nested repeater field has rows of data
 					        	if( have_rows('team_members') ):
 
-								 	echo '<div class="danzerpress-flex-row">';
+								 	echo '<div class="danzerpress-flex-row ' . $section_name . '-wrap' . '">';
 
 								 	// loop through the rows of data
 								    while ( have_rows('team_members') ) : the_row();
@@ -628,40 +628,49 @@
 							        	$job_title = get_sub_field('job_title');
 							        	$section_description = get_sub_field('section_description'); ?>
 
-										<div class="danzerpress-one-third-fix danzerpress-team-member-image danzerpress-zero">
-											<img class="wow fadeInLeft" src="<?php echo $section_image; ?>">
-										</div>
+							        	<?php 
+										if (get_sub_field('section_image')) {
+											$section_new_image = get_sub_field('section_image');
+										} else {
+											$section_new_image = get_template_directory_uri() . '/danzerpress-images/no-image.png';
+										}
+										?>
+										<div class="danzerpress-flex-row <?php echo $section_name . '-container'; ?>">
+											<div class="danzerpress-one-third-fix danzerpress-team-member-image danzerpress-zero">
+												<img class="wow fadeInLeft" src="<?php echo $section_new_image; ?>">
+											</div>
 
-										<div class="danzerpress-two-thirds-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
-											<div class="danzerpress-box">
-												<h2 style="margin-bottom: 0px;"><?php echo $job_name ?></h2>
-												<h4 style="margin-bottom: 20px;"><?php echo $job_title; ?></h4>
-												<p><?php echo $section_description; ?></p>
-												<p>
-													<?php 
-													// check if the nested repeater field has rows of data
-										        	if( have_rows('social_media') ):
+											<div class="danzerpress-two-thirds-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
+												<div class="danzerpress-box">
+													<h2 style="margin-bottom: 0px;"><?php echo $job_name ?></h2>
+													<h4 style="margin-bottom: 20px;"><?php echo $job_title; ?></h4>
+													<p><?php echo $section_description; ?></p>
+													<p>
+														<?php 
+														// check if the nested repeater field has rows of data
+											        	if( have_rows('social_media') ):
 
-													 	echo '<div class="danzerpress-flex-row">';
+														 	echo '<div class="danzerpress-flex-row">';
 
-													 	// loop through the rows of data
-													    while ( have_rows('social_media') ) : the_row();
+														 	// loop through the rows of data
+														    while ( have_rows('social_media') ) : the_row();
 
-															// vars
-															$socialLink = get_sub_field('social_media_link');
-															$socialMediaNetwork = get_sub_field('social_media_network');
+																// vars
+																$socialLink = get_sub_field('social_media_link');
+																$socialMediaNetwork = get_sub_field('social_media_network');
 
-															echo '
-																<a href="' . $socialLink . '"><i class="fa fa-' . $socialMediaNetwork . '"></i></a>
-															';
+																echo '
+																	<a href="' . $socialLink . '"><i class="fa fa-' . $socialMediaNetwork . '"></i></a>
+																';
 
-														endwhile;
+															endwhile;
 
-														echo '</div>';
+															echo '</div>';
 
-													endif; ?>
+														endif; ?>
 
-												</p>
+													</p>
+												</div>
 											</div>
 										</div>
 
