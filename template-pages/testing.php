@@ -320,32 +320,28 @@
 <div class="danzerpress-section danzerpress-odd" id="" style="">
 	<div class="danzerpress-wrap">
 		<h2 class="danzerpress-title" style="margin-bottom: 40px;">FAQ</h2>
-		<div class="danzerpress-flex-row">
-			<div class="danzerpress-four-fifths danzerpress-col-center" style="">
 
-				<div class="danzerpress-flex-row">
-					<div class="danzerpress-two-thirds danzerpress-col-center">
+			<div class="danzerpress-flex-row">
+				<div class="danzerpress-two-thirds danzerpress-col-center">
 
-						<button class="danzerpress-accordion"><h4>What do we accomplish?</h4></button>
-						<div class="danzerpress-panel">
-						  <p class="danzerpress-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus lacus ac purus pharetra, nec dictum magna fermentum. Suspendisse viverra, risus eu cursus tempor, diam libero congue ligula, et gravida tellus arcu quis leo. Sed ullamcorper ultrices metus id vestibulum. </p>
-						</div>
-
-						<button class="danzerpress-accordion"><h4>Section 2</h4></button>
-						<div class="danzerpress-panel">
-						  <p class="danzerpress-box">Lorem ipsum...</p>
-						</div>
-
-						<button class="danzerpress-accordion"><h4>Section 3</h4></button>
-						<div class="danzerpress-panel">
-						  <p class="danzerpress-box">Lorem ipsum...</p>
-						</div>
-
+					<a id="accordion-1" class="danzerpress-accordion" href="#accordion-1"><h4>What do we accomplish?</h4></a>
+					<div class="danzerpress-panel">
+					  <p class="danzerpress-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus lacus ac purus pharetra, nec dictum magna fermentum. Suspendisse viverra, risus eu cursus tempor, diam libero congue ligula, et gravida tellus arcu quis leo. Sed ullamcorper ultrices metus id vestibulum.</p>
 					</div>
-				</div>
 
+					<a id="accordion-2" class="danzerpress-accordion" href="#accordion-2"><h4>Section 2</h4></a>
+					<div class="danzerpress-panel">
+					  <p class="danzerpress-box">Lorem ipsum...</p>
+					</div>
+
+					<button class="danzerpress-accordion"><h4>Section 3</h4></button>
+					<div class="danzerpress-panel">
+					  <p class="danzerpress-box">Lorem ipsum...</p>
+					</div>
+
+				</div>
 			</div>
-		</div>
+
 	</div>
 </div>
 
@@ -365,6 +361,43 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+
+<div class="danzerpress-section danzerpress-odd" id="" style="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">Tabs</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-two-thirds danzerpress-col-center" style="">
+
+				<div id="tabs">
+					<ul class="danzerpress-flex-row">
+						<li><a href="#tabs-1" title="">Tab 1</a></li>
+						<li><a href="#tabs-2" title="">Tab 2</a></li>
+						<li><a href="#tabs-3" title="">Tab 3</a></li>
+					</ul>
+
+					<div id="tabs_container">
+
+						<div id="tabs-1">
+							    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p><p>Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+						</div>
+
+						<div id="tabs-2">
+							    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+					
+						</div>
+
+						<div id="tabs-3">
+							    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+						</div>
+
+					</div><!--End tabs container-->
+					
+				</div><!--End tabs-->
+
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <?php get_footer(); ?>

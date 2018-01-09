@@ -1,5 +1,6 @@
 (function( $ ) {
- 
+ 	
+ 	$.noConflict();
     "use strict";
 
 	new WOW().init();

@@ -220,15 +220,15 @@ function danzerpress_scripts() {
 	wp_enqueue_script( 'danzerpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
   	// jquery libraries
-	wp_enqueue_script( 'jquery-2.1.1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, false );
+	wp_enqueue_script( 'jquery-2.1.1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', array('jquery'), null, false );
 
   	// Drawer
     wp_enqueue_style( 'drawer-min-css', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css' );
 	wp_enqueue_style( 'drawer-css', get_template_directory_uri() . '/css/drawer.css' );
 
 	// jquery & iscroll
-	wp_enqueue_script('drawer-iscroll', 'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js', array(), null, true );
-	wp_enqueue_script('drawer-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js', array(), null, true );
+	wp_enqueue_script('drawer-iscroll', 'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js', array('jquery'), null, true );
+	wp_enqueue_script('drawer-min-js', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js', array('jquery'), null, true );
 
 	// Animate.css
 	wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
@@ -249,6 +249,12 @@ function danzerpress_scripts() {
     //Fancybox
     wp_enqueue_script( 'fancybox.js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_style( 'fancybox.css', get_template_directory_uri() . '/js/jquery.fancybox.min.css' );
+
+    //Tabulous
+    //wp_enqueue_script( 'jquery-1.7.2', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'tabulous.js', get_template_directory_uri() . '/js/tabulous.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'tabulous-init.js', get_template_directory_uri() . '/js/tabulous-init.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_style( 'tabulous.css', get_template_directory_uri() . '/css/tabulous.css' );
 
 	// Danzerpress Scroll to fix
     // wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
