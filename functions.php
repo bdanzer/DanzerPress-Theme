@@ -99,7 +99,7 @@ function example_dashboard_widget_function() {
 }
 
 function example_add_dashboard_widgets() {
- 	wp_add_dashboard_widget( 'example_dashboard_widget', '<img style="height: 60px; width: auto; display: block;" src="http://localhost:8888/danzerpress-live-environment/wp-content/uploads/2017/11/danzerpressofficial2.png"><span>DanzerPress Theme Instructions</span>', 'example_dashboard_widget_function' );
+ 	wp_add_dashboard_widget( 'example_dashboard_widget', '<img style="height: 60px; width: auto; display: block;" src="'. home_url() . '/wp-content/uploads/2017/11/danzerpressofficial2.png"><span>DanzerPress Theme Instructions</span>', 'example_dashboard_widget_function' );
  	
  	// Globalize the metaboxes array, this holds all the widgets for wp-admin
  	global $wp_meta_boxes;
@@ -236,7 +236,6 @@ function danzerpress_scripts() {
 	//wow-js
 	wp_enqueue_script('wow-min-js', get_template_directory_uri() . '/js/wow.min.js', array(), null, true );
 
-
 	// Danzerpress Layouts
 	wp_enqueue_style( 'danzerpress-layouts', get_template_directory_uri() . '/css/danzerpress-layouts.css' );
 
@@ -255,6 +254,14 @@ function danzerpress_scripts() {
     wp_enqueue_script( 'tabulous.js', get_template_directory_uri() . '/js/tabulous.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_script( 'tabulous-init.js', get_template_directory_uri() . '/js/tabulous-init.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_style( 'tabulous.css', get_template_directory_uri() . '/css/tabulous.css' );
+
+    //Parallax
+    wp_enqueue_script( 'parallax.js', get_template_directory_uri() . '/js/parallax.js', array( 'jquery' ), '1.0.0', true );
+
+    //Tocify
+    wp_enqueue_style( 'jquery.tocify.css', get_template_directory_uri() . '/css/jquery.tocify.css' );
+    wp_enqueue_script( 'jqueryui-1.9.1', get_template_directory_uri() . '/js/jquery-ui-1.9.1.custom.min.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'jquery.tocify.js', get_template_directory_uri() . '/js/jquery.tocify.js', array( 'jquery' ), '1.0.0', true );
 
 	// Danzerpress Scroll to fix
     // wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');

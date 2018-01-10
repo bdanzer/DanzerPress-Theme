@@ -399,5 +399,43 @@ for (i = 0; i < acc.length; i++) {
 	</div>
 </div>
 
+<div class="parallax-window" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="http://localhost:8888/danzerpress-live-environment/wp-content/uploads/2017/11/spencer-watson-367233.jpg" data-natural-width="1400" data-natural-height="1400" style="height: 505px;"></div>
+
+<div class="danzerpress-section parallax-window" data-parallax="scroll" data-image-src="https://unsplash.it/1920/1080/?random" id="" style="">
+	<div class="danzerpress-wrap">
+		<h2 class="danzerpress-title" style="margin-bottom: 40px;">Tabs</h2>
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-two-thirds danzerpress-col-center" style="">
+
+				<div id="tabs">
+					<ul class="danzerpress-flex-row">
+						<li><a href="#tabs-1" title="">Tab 1</a></li>
+						<li><a href="#tabs-2" title="">Tab 2</a></li>
+						<li><a href="#tabs-3" title="">Tab 3</a></li>
+					</ul>
+
+					<div id="tabs_container">
+
+						<div id="tabs-1">
+							    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p><p>Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+						</div>
+
+						<div id="tabs-2">
+							    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+					
+						</div>
+
+						<div id="tabs-3">
+							    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+						</div>
+
+					</div><!--End tabs container-->
+					
+				</div><!--End tabs-->
+
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

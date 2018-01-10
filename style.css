@@ -64,6 +64,7 @@ body,
 .site-content {
     /*height: 100%;*/
     background: #f8f9f9;
+    background: transparent;
 }
 
 article,
@@ -369,6 +370,9 @@ blockquote {
     margin: 20px auto;
     font-style: italic;
     font-weight: bold;
+    border: 2px solid #e6e6e6;
+    padding: 20px;
+    box-shadow: 1px 1px 23px #0000001a;
 }
 
 blockquote p {
@@ -1328,6 +1332,14 @@ input[type="color"], textarea {
 }
 
 /*DanzerPress Sections*/
+.page-template-danzerpress-sections #primary {
+    background: none;
+}
+.parallax-window,
+.danzerpress-odd.parallax-window {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)) !important;
+}
+
 .danzerpress-section-content h2, 
 .danzerpress-section-content p {
     text-align: center;

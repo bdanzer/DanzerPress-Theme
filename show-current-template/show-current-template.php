@@ -130,7 +130,7 @@ class Show_Template_File_Name {
 			$is_older_than_3_8 = '-old';
 		}
 		
-		$stylesheet_path = plugins_url( 'css/style' . $is_older_than_3_8 . '.css', __FILE__ );
+		$stylesheet_path = get_template_directory_uri() . '/show-current-template/css/style.css';
 		wp_register_style( 'current-template-style', $stylesheet_path );
 		wp_enqueue_style( 'current-template-style' );
 	}
