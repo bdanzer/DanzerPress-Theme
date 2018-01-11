@@ -1335,10 +1335,10 @@ input[type="color"], textarea {
 .page-template-danzerpress-sections #primary {
     background: none;
 }
-.parallax-window,
+/*.parallax-window,
 .danzerpress-odd.parallax-window {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)) !important;
-}
+}*/
 
 .danzerpress-section-content h2, 
 .danzerpress-section-content p {

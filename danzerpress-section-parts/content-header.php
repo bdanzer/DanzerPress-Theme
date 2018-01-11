@@ -42,13 +42,16 @@ if ( $image_side == 'right' ) {
     //Do Nothing
 }
 
+if ( in_array( $section_name, $sections_with_background ) ) {
+    $section_class = 'parallax-section';
+    $parallax_setup = 'parallax-window" data-parallax="scroll" data-image-src="' . $url . '"data-ios-fix="true" style="background:linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29))"'; 
+} else {
+    $parallax_setup = '"';
+}
+
 ?>
-<div 
-    id="section-<?php echo $section_number; ?>" 
-    class="danzerpress-section danzerpress-background-<?php echo $section_number . ' ' . $section_class . ' ' . $section_name; ?> 
-        <?php if (in_array( $section_name, $sections_with_background )) { 
-            echo 'parallax-window" data-parallax="scroll" data-image-src="' . $url . '"data-ios-fix="true" style="background:linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29))"'; 
-        } else { echo '"'; } ?>>
+
+<div id="section-<?php echo $section_number; ?>" class="danzerpress-section danzerpress-background-<?php echo $section_number . ' ' . $section_class . ' ' . $section_name . ' ' . $parallax_setup; ?>>
 <div class="danzerpress-wrap">
 
 <?php
