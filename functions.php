@@ -99,7 +99,7 @@ function example_dashboard_widget_function() {
 }
 
 function example_add_dashboard_widgets() {
- 	wp_add_dashboard_widget( 'example_dashboard_widget', '<img style="height: 60px; width: auto; display: block;" src="'. home_url() . '/wp-content/uploads/2017/11/danzerpressofficial2.png"><span>DanzerPress Theme Instructions</span>', 'example_dashboard_widget_function' );
+ 	wp_add_dashboard_widget( 'example_dashboard_widget', '<img style="height: 60px; width: auto; display: block;" src="'. get_template_directory_uri() . '/danzerpress-images/danzerpress-logo.png"><span>DanzerPress Theme Instructions</span>', 'example_dashboard_widget_function' );
  	
  	// Globalize the metaboxes array, this holds all the widgets for wp-admin
  	global $wp_meta_boxes;
