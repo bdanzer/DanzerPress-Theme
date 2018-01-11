@@ -47,8 +47,8 @@ if ( $image_side == 'right' ) {
     id="section-<?php echo $section_number; ?>" 
     class="danzerpress-section danzerpress-background-<?php echo $section_number . ' ' . $section_class . ' ' . $section_name; ?> 
         <?php if (in_array( $section_name, $sections_with_background )) { 
-            echo 'parallax-window" data-parallax="scroll" data-image-src="' . $url; 
-        } ?>">
+            echo 'parallax-window" data-parallax="scroll" data-image-src="' . $url . '"data-ios-fix="true" style="background:linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29))"'; 
+        } else { echo '"'; } ?>>
 <div class="danzerpress-wrap">
 
 <?php

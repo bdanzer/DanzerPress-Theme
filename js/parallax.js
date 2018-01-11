@@ -93,7 +93,8 @@
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
       if (this.imageSrc && this.iosFix && !this.$element.is('img')) {
         this.$element.css({
-          backgroundImage: 'url(' + this.imageSrc + ')',
+          background: 'url(' + this.imageSrc + ')', 
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29)), url(' + this.imageSrc + ')',
           backgroundSize: 'cover',
           backgroundPosition: this.position
         });
