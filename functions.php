@@ -239,6 +239,9 @@ function danzerpress_scripts() {
 	// Danzerpress Layouts
 	wp_enqueue_style( 'danzerpress-layouts', get_template_directory_uri() . '/css/danzerpress-layouts.css' );
 
+	// Danzerpress Sections
+	wp_enqueue_style( 'danzerpress-sections', get_template_directory_uri() . '/css/danzerpress-sections.css' );
+
 	// Font Awesome
     wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/3be2183bb5.js', array(), null, true );
     
