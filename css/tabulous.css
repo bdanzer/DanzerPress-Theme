@@ -209,5 +209,6 @@ div#tabs ul {
 @media screen and (max-width: 768px ) {
 	#tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li {
 	    flex: 100%;
+	    margin: 0;
 	}
 }

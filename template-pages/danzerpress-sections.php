@@ -134,6 +134,10 @@
 		        	include(locate_template('danzerpress-section-parts/tabs-section.php'));
 		        endif;
 
+		        if( get_row_layout() == 'raw_code_section' ):
+		        	include(locate_template('danzerpress-section-parts/raw-code-section.php'));
+		        endif;
+
 			    if ($section_is_odd == 0) {
 			    	$section_is_odd++;
 			    } else {

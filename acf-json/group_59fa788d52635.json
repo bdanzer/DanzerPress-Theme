@@ -3000,6 +3000,78 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5a5853501a07c": {
+                    "key": "5a5853501a07c",
+                    "name": "raw_code_section",
+                    "label": "Raw Code Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a5853501a07d",
+                            "label": "Image",
+                            "name": "section_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "full",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5a5853501a07e",
+                            "label": "Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a58537b1a083",
+                            "label": "Raw Code",
+                            "name": "raw_code",
+                            "type": "wysiwyg",
+                            "instructions": "<div class=\"danzerpress-four-fifths danzerpress-col-center\">\r\n      <where your code will go>\r\n<\/div>",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "text",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -3026,5 +3098,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1515480335
+    "modified": 1515738494
 }

@@ -266,8 +266,8 @@ function danzerpress_scripts() {
     wp_enqueue_script( 'jqueryui-1.9.1', get_template_directory_uri() . '/js/jquery-ui-1.9.1.custom.min.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_script( 'jquery.tocify.js', get_template_directory_uri() . '/js/jquery.tocify.js', array( 'jquery' ), '1.0.0', true );
 
-	// Danzerpress Scroll to fix
-    // wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
+	//Danzerpress Scroll to fix
+    wp_enqueue_script( 'danzerpress-scroll-to-fix', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array( 'jquery' ), '1.0.0');
 
     // Waypoints
 	wp_enqueue_script( 'jquery-waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js', array(), null, true );

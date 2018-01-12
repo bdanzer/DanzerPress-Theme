@@ -2,6 +2,9 @@
     .home-section li {
         margin-left: 20px;
     }
+    div#toc {
+    position: absolute;
+}
 </style>
 
 <div class="danzerpress-wrap">
@@ -20,7 +23,7 @@
                     <li>Create a new page called home.</li>
                     <li>On that same page below the update button set the template to: DanzerPress Sections.</li>
                     <li>Click add row on the new box that shows up and you can choose which section you want to use. Most commonly you'd use "hero section"</li>
-                    <li>Any other issues you can contact me at help@danzerpress.com</li>
+                    <li>Any other issues you can contact me at <a href="mailto:help@danzerpress.com">help@danzerpress.com</a></li>
                 </ol>
                 <h3>Page</h3>
                 <ol class="">
