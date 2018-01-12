@@ -3072,6 +3072,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5a5885fc84630": {
+                    "key": "5a5885fc84630",
+                    "name": "test_new",
+                    "label": "test new",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a58860c84634",
+                            "label": "test",
+                            "name": "test",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -3098,5 +3127,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1515738494
+    "modified": 1515750929
 }
