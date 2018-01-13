@@ -301,11 +301,15 @@ function add_drawer_to_footer() { ?>
 add_action('wp_footer', 'add_drawer_to_footer');
 
 // Replaces the excerpt "Read More" text by a link
-function new_excerpt_more($more) {
+function new_excerpt_more() {
     global $post;
 	return '...<br><p><a class="danzerpress-button-modern" href="'. get_permalink($post->ID) . '"> Read more</a></p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function excerpt($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, new_excerpt_more());
+}
 
 function modify_read_more_link() {
     return '<a class="danzerpress-button" href="' . get_permalink() . '">Your Read More Link Text</a>';
