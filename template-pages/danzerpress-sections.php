@@ -34,16 +34,14 @@
 		<?php
 		}
 	}
+$danzerpressSectionClass = array(
+	'danzerpress-section',
+);
 
-	
-	?>
-
-	<?php
 	// check if the flexible content field has rows of data
 	if( have_rows('flexible_layout') ):
 			$section_is_odd = 0;
 			$section_number = 1;
-			$hero_section = '';
 
 		 	// loop through the rows of data
 		    while ( have_rows('flexible_layout') ) : the_row();

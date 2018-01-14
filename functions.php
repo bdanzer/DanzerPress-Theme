@@ -317,7 +317,7 @@ function modify_read_more_link() {
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 function danzerpress_excerpt_length( $length ) {
-    return 20;
+    return 100;
 }
 add_filter( 'excerpt_length', 'danzerpress_excerpt_length', 999 );
 

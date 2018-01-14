@@ -68,7 +68,7 @@
 			}
 		});
 
-		$(".sub-menu").parent().append("<i class='fa fa-caret-down'></i>");
+		$("header .sub-menu").parent().append("<i class='fa fa-caret-down'></i>");
 
 
 })(jQuery);

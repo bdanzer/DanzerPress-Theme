@@ -1,6 +1,7 @@
 <?php
 //Vars
 $section_name = 'testimonial-section';
+$starCounter = 0;
 
 //Header
 include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
@@ -34,9 +35,15 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 						echo '
 							<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
-								<div class="danzerpress-content wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-									<p style="font-size: 16px;line-height: 28px;">' . $testimonialContent . '</p>
+								<div class="danzerpress-content wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">';
+									
+							while ( $starCounter < $testimonialStars ) {
+								echo '<i class="fa fa-star"></i>';
+								$starCounter++;
+							}
+									
+						echo'
+							<p style="font-size: 16px;line-height: 28px;">' . $testimonialContent . '</p>
 									<div class="danzerpress-image-box"><a href=""><img src="' . $testimonialImage . '"></a></div>
 									<h4>' . $testimonialName . '</h4>
 								</div>

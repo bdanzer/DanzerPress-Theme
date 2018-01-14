@@ -1,6 +1,5 @@
 <?php 
 //Vars
-$hero_section = true;
 $section_name = 'danzerpress-hero-section-w-side-image';
 
 //Header

@@ -1,6 +1,6 @@
 <?php
 //Vars
-$section_name = 'tabs-section';
+$section_name = 'raw-code-section';
 
 //Header
 include(locate_template('danzerpress-section-parts/content-header.php' )); ?>

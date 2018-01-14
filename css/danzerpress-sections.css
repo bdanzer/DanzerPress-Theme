@@ -113,9 +113,9 @@
     height: 100%;
     object-fit: cover;
 }
-.danzerpress-team-member-section .fa {
+.team-member-section .fa {
     margin-right: 20px;
-    color: #06c4ec;
+    font-size: 18px;
 }
 .danzerpress-team-member-image img:hover {
     transform: scale(1.2);
