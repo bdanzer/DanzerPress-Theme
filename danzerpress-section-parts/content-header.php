@@ -1,6 +1,7 @@
 <?php
 
 //Vars
+$section_custom_class = get_sub_field('custom_css_class');
 $section_title = get_sub_field('section_title');
 $section_description = get_sub_field('section_description');
 $section_image = get_sub_field('section_image');
@@ -48,7 +49,8 @@ if ( $section_background || $section_name == 'danzerpress-hero-section-w-side-im
 $danzerpress_section_class = array(
     'danzerpress-section',
     $section_class,
-    $section_name
+    $section_name,
+    $section_custom_class
 );
 
 $danzerpress_section_id = 'section-' . $section_number;

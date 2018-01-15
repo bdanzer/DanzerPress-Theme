@@ -61,30 +61,10 @@ $danzerpressSectionClass = array(
 		        	include(locate_template('danzerpress-section-parts/hero-section.php' ));
 		        endif; //end hero section
 
-		        // #Hero Section with Side Image
-		        if( get_row_layout() == 'hero_section_w_side_image' ): 
-		        	include(locate_template('danzerpress-section-parts/hero-section-w-side-image.php' ));
-		       	endif; //end hero section with side image
-
-		        // #Hero Section no Background
-		        if( get_row_layout() == 'hero_section_no_background' ):
-		        	include(locate_template('danzerpress-section-parts/hero-section-no-background.php'));
-		        endif;
-
 				// #Icons
 		        if( get_row_layout() == 'icons' ):
 		        	include(locate_template('danzerpress-section-parts/icons.php'));
 		        endif;
-
-		        // #List Icons
-		        if( get_row_layout() == 'list_icons' ):
-		        	include(locate_template('danzerpress-section-parts/list-icons.php'));
-		        endif;
-
-		        // #Simple Icons
-		        if( get_row_layout() == 'simple_icons' ):
-		        	include(locate_template('danzerpress-section-parts/simple-icons.php'));
-				endif;
 
 		        // #Image Section
 		        if( get_row_layout() == 'image_section' ):

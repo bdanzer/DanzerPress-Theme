@@ -1,9 +1,15 @@
 <div class="danzerpress-col-1 danzerpress-col-center">
 	<div class="danzerpress-flex-row">
 		<div class="danzerpress-col-2 <?php echo $order; ?>">
+
+			<?php if ($hero_layout != 3) { ?>
 			<div class="danzerpress-image-wrap wow <?php echo $wowclass; ?>">
 				<img src="<?php echo $section_image; ?>">
 			</div>
+			<?php } else {
+				echo get_sub_field('custom_script');
+			} ?>
+
 		</div>
 		<div id="" class="danzerpress-col-2 danzerpress-flex-row">
 			<div class="danzerpress-align-center">

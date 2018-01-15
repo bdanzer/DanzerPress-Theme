@@ -124,7 +124,7 @@ input[type="submit"] {
 a.danzerpress-button-modern-transparent {
     background: transparent !important;
     /* border: 2px solid #31ba57 !important; */
-    color: #333333 !important;
+    color: #333333;
     margin-top: 8px;
     display: inline-block;
     font-weight: bold;
@@ -191,6 +191,7 @@ div.wpcf7-validation-errors {
 	margin: auto;
 	max-width: 1500px;
 	overflow: hidden;
+	overflow: visible;
 }
 .danzerpress-main-ns {
     flex: 0 0 calc(100%);

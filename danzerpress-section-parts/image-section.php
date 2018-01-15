@@ -1,6 +1,7 @@
 <?php
 //Vars
 $section_name = 'danzerpress-image-section';
+$section_layout = get_sub_field('image_or_video' );
 
 // get iframe HTML
 if ( get_sub_field('section_video') ) {
@@ -37,32 +38,38 @@ if ( get_sub_field('section_video') ) {
 //Header
 include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 	<div class="danzerpress-flex-row">
-		<div class="danzerpress-col-1 danzerpress-col-center">
-			<div class="danzerpress-flex-row">
-				<div class="danzerpress-col-2 <?php echo $order; ?>">
-					<div class="danzerpress-image-wrap danzerpress-16-9-container wow <?php echo $wowclass; ?>">
+		
+		<?php if ( $section_layout != 'longimage' ) { ?>
+			<div class="danzerpress-col-1 danzerpress-col-center">
+				<div class="danzerpress-flex-row">
+					<div class="danzerpress-col-2 <?php echo $order; ?>">
+						<div class="danzerpress-image-wrap danzerpress-16-9-container wow <?php echo $wowclass; ?>">
 
-						<?php 
-						if ( get_sub_field('image_or_video' ) == 'image') {
-							echo'<img class="danzerpress-ar-items" src="' . $section_image . '">';
-						} elseif ( get_sub_field('image_or_video') == 'video' ) {
-							echo $iframe;
-						}
+							<?php 
+							if ( $section_layout == 'image') {
+								echo'<img class="danzerpress-ar-items" src="' . $section_image . '">';
+							} elseif ( $section_layout == 'video' ) {
+								echo $iframe;
+							}
 
-						?>
+							?>
+						</div>
 					</div>
-				</div>
-				<div class="danzerpress-col-2 danzerpress-flex-row">
-					<div class="danzerpress-section-content danzerpress-align-center">
-						<h2 class="danzerpress-title wow fadeIn"><?php echo $section_title; ?></h2>
-						<p class="wow fadeIn image-section-p"><?php echo $section_description; ?></p>
-						<?php 
-						//Buttons
-						include(locate_template('danzerpress-section-parts/content-button.php' )); 
-						?> 
+					<div class="danzerpress-col-2 danzerpress-flex-row">
+						<div class="danzerpress-section-content danzerpress-align-center">
+							<h2 class="danzerpress-title wow fadeIn"><?php echo $section_title; ?></h2>
+							<p class="wow fadeIn image-section-p"><?php echo $section_description; ?></p>
+							<?php 
+							//Buttons
+							include(locate_template('danzerpress-section-parts/content-button.php' )); 
+							?> 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<?php } elseif ($section_layout == 'longimage') {
+				include(locate_template('danzerpress-section-parts/long-image-content.php' )); 
+			} ?>
+
 	</div>
 <?php danzerpress_sections_footer(); ?>

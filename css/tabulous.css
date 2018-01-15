@@ -16,7 +16,6 @@ div#tabs ul {
 
 #tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
 	float: left;
-	margin-right: 2px;
 	list-style: none;
 	flex: 1;
 }
@@ -40,6 +39,10 @@ div#tabs ul {
 	padding: 40px;
 	overflow: hidden;
 	position: relative;
+	background: rgb(248, 249, 249);
+}
+
+.danzerpress-odd #tabs_container {
 	background: white;
 }
 
@@ -197,8 +200,8 @@ div#tabs ul {
 }
 
 .tabulous_active {
-    background: white !important;
-    color: #05C4EB !important;
+    background: #242a2f !important;
+    color: #ffffff !important;
 }
 
 .tabulousclear {

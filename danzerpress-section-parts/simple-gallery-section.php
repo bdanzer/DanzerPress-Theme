@@ -1,10 +1,13 @@
 <?php
 //Vars
 $section_name = 'simple-gallery-section';
+$section_layout = get_sub_field('section_layout');
 
 //Header
 include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 	<div class="danzerpress-flex-row">
+
+		<?php if ( $section_layout == 'simplegallery' ) { ?>
 		<div class="danzerpress-two-thirds danzerpress-col-center">
 			<h2 class="danzerpress-title" style=""><?php echo $section_title; ?></h2>
 			<p style="text-align: center; font-size: 18px;margin-bottom: 40px;"><?php echo $section_description; ?></p>
@@ -41,6 +44,11 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 			?>
 			
 		</div>
+
+	<?php } elseif ( $section_layout == 'fourimages' ) {
+		include(locate_template('danzerpress-section-parts/four-image-content.php' )); 
+	} ?>
+
 	</div>
 
 <?php danzerpress_sections_footer(); ?>
