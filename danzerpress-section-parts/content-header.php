@@ -9,15 +9,16 @@ $section_icon = get_sub_field('section_icon');
 $section_background = get_sub_field('section_background');
 $section_background_color = get_sub_field('background_color');
 $sections_with_background = array(
-        'danzerpress-hero-section',
-        'danzerpress-hero-section-w-side-image'
+        'danzerpress-hero-section'
     );
 
+
+//Setting the URL on certain conditions
 if ( $section_background == true ) {
     $url = $section_background;
 } elseif ($section_background_color == true) {
     $danzerpress_style = 'background:' . $section_background_color;
-} elseif ( $section_background == false ) {
+} elseif ( !$section_background ) {
     $url = 'https://unsplash.it/1920/1080/?random';
 }
 
@@ -25,6 +26,8 @@ if (!$section_image && $section_name == 'danzerpress-image-section' || !$section
     $section_image = 'https://unsplash.it/1920/1080/?random';
 }
 
+
+//Image Side
 $image_side = get_sub_field('image_side');
 
 if ( $image_side == 'right' ) {
@@ -37,7 +40,7 @@ if ( $image_side == 'right' ) {
     //Do Nothing
 }
 
-if ( $section_background || $section_name == 'danzerpress-hero-section-w-side-image' ) {
+if ( $section_background || !$section_background && in_array($section_name, $sections_with_background) ) {
     $section_class = 'parallax-section parallax-window';
     $parallax_setup = 'data-parallax="scroll" data-image-src="' . $url . '"data-ios-fix="true"'; 
     $danzerpress_style = 'background:linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29))';
