@@ -30,6 +30,12 @@ div.half-and-half {
     height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+    .half-and-half .danzerpress-order-0 {
+        display: none !important;
+    }
+}
+
 /*Icon Section*/
 .danzerpress-icon-box {
     max-width: 60px;
