@@ -657,10 +657,19 @@ ul#primary-menu .sub-menu li:hover {
 .drawer-nav .menu-menu-1-container {
     background: white;
 }
-.drawer-navbar #primary-menu li a {
+/*.drawer-navbar #primary-menu li a {
     font-family: roboto;
     text-transform: uppercase;
     font-size: 13px;
+    letter-spacing: 1px;
+}*/
+.drawer-navbar #primary-menu li a {
+    font-family: "Raleway",Helvetica,Arial,sans-serif;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
