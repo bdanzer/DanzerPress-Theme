@@ -41,7 +41,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 		<?php } elseif ($hero_layout == 2 || $hero_layout == 3) {
 			include(locate_template('danzerpress-section-parts/hero-section-w-side-image-content.php' ));
-		}
+		} 
 		?>
 
 	</div>

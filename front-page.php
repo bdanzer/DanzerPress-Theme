@@ -16,7 +16,6 @@ get_header(); ?>
 
 	<div id="primary" class="danzerpress-container-fw">
 		<div class="danzerpress-flex-row">
-			<div class="danzerpress-main-ns">
 
 				<?php 
 
@@ -27,8 +26,7 @@ get_header(); ?>
 				endwhile; endif; 
 
 				?>
-
-			</div>
+				
 		</div>
 	</div><!-- #primary -->
 

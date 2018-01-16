@@ -3,6 +3,21 @@
     "title": "General Theme Settings",
     "fields": [
         {
+            "key": "field_5a5d93f29fb08",
+            "label": "Theme Color",
+            "name": "theme_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
             "key": "field_59ffd8f3324ec",
             "label": "Full screen section 1",
             "name": "full_screen_section_1",
@@ -108,5 +123,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510389330
+    "modified": 1516084749
 }

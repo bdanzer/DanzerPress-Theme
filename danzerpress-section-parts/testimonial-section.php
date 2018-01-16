@@ -35,7 +35,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 						echo '
 							<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1">
-								<div class="danzerpress-content wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">';
+								<div class="danzerpress-content danzerpress-shadow-2 wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">';
 									
 							while ( $starCounter < $testimonialStars ) {
 								echo '<i class="fa fa-star"></i>';

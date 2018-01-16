@@ -50,7 +50,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 							<img class="" src="<?php echo $recent_post_url; ?>">
 						</div>
 
-						<div class="danzerpress-col-<?php echo $half_or_whole; ?>-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeIn" style="height: 100%;">
+						<div class="danzerpress-col-<?php echo $half_or_whole; ?>-fix danzerpress-zero <?php echo $danzerpressColor; ?> danzerpress-shadow-2 wow fadeIn" style="height: 100%;">
 							<div class="danzerpress-box">
 								<h2><?php the_title(); ?></h2>
 								<p><?php echo excerpt($new_excerpt); ?></p>

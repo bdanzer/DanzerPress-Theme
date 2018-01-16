@@ -291,15 +291,6 @@ function wpse_add_arrow( $item_output, $item, $depth, $args ){
     return $item_output;
 }
 
-function add_drawer_to_footer() { ?>
-
-	<script type="text/javascript">
-		
-	</script>
-
-<?php }
-add_action('wp_footer', 'add_drawer_to_footer');
-
 // Replaces the excerpt "Read More" text by a link
 function new_excerpt_more() {
     global $post;
@@ -504,3 +495,5 @@ function jp_sync_acf_fields($json_dirs) {
 		}
 	}
 }
+
+?>

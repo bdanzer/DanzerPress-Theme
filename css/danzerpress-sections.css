@@ -19,6 +19,16 @@
     text-align: center;
 }
 
+/*half and half section*/
+div.half-and-half {
+    background: transparent !important;
+    padding: 0px;
+}
+.half-and-half .danzerpress-wrap,
+.half-and-half .danzerpress-flex-row,
+.half-and-half .danzerpress-container-fw {
+    height: 100%;
+}
 
 /*Icon Section*/
 .danzerpress-icon-box {
@@ -139,7 +149,6 @@ div.slider-revolution-section {
 /*Faq Section*/
 /* Style the buttons that are used to open and close the danzerpress-accordion panel */
 .danzerpress-accordion {
-    background-color: #eee;
     color: #444;
     cursor: pointer;
     padding: 18px;

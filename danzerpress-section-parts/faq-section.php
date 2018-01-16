@@ -27,7 +27,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 						$faqContent = get_sub_field('faq_content');
 
 						echo '
-							<button class="danzerpress-accordion"><h4>' . $faqTitle . '</h4></button>
+							<button class="danzerpress-accordion danzerpress-shadow-2 ' . $danzerpressColor . '"><h4>' . $faqTitle . '</h4></button>
 							<div class="danzerpress-panel">
 							  <div class="danzerpress-box ' . $danzerpressColor . '">' . $faqContent . '</div>
 							</div>

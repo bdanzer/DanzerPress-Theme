@@ -14,7 +14,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 		 		<?php 
 		 			$x = 1;
 				 	echo '<div class="danzerpress-two-thirds danzerpress-col-center">';
-					 	echo '<div id="tabs">
+					 	echo '<div id="tabs" class="danzerpress-shadow-2">
 								<ul class="danzerpress-flex-row">';
 									// loop through the rows of data
 								    while ( have_rows('tabs_title_block') ) : the_row();

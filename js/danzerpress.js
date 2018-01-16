@@ -11,9 +11,9 @@
 		$(document).scroll(function(){
 		    if($(this).scrollTop() > a)
 		    {   
-		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').addClass("danzerpress-non-trans").css({"background":"#242a2f"});
+		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').addClass("danzerpress-non-trans").removeClass("danzerpress-trans");
 		    } else {
-		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').removeClass("danzerpress-non-trans").css({"background":"transparent", "transition":".7s"});
+		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').removeClass("danzerpress-non-trans").addClass("danzerpress-trans");
 		    }
 		});
 

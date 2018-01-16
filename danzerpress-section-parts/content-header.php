@@ -40,13 +40,15 @@ if ( $image_side == 'right' ) {
     //Do Nothing
 }
 
-if ( $section_background || !$section_background && in_array($section_name, $sections_with_background) ) {
+if ( $section_background || !$section_background && in_array($section_name, $sections_with_background) && $background_type != 'default' ) {
     $section_class = 'parallax-section parallax-window';
     $parallax_setup = 'data-parallax="scroll" data-image-src="' . $url . '"data-ios-fix="true"'; 
     $danzerpress_style = 'background:linear-gradient(rgba(0, 0, 0, 0.85), rgba(45, 45, 45, 0.29))';
 } else {
     $parallax_setup = "";
+    $danzerpress_style = "";
 }
+
 
 //Classes for section class
 $danzerpress_section_class = array(

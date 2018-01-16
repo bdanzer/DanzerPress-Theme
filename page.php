@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="danzerpress-container-fw" style="padding: 40px 0;">
 		<main id="main" class="danzerpress-wrap">
 			<div class="danzerpress-flex-row">
-				<div class="danzerpress-main-ws">
+				<div class="danzerpress-two-thirds">
 					<div class="danzerpress-box danzerpress-white">
 						<?php
 						while ( have_posts() ) : the_post();
@@ -33,8 +33,10 @@ get_header(); ?>
 						?>
 					</div>
 				</div>
-				<div class="danzerpress-sidebar">
-					<?php get_sidebar(); ?>
+				<div class="danzerpress-one-third">
+					<div class="danzerpress-box">
+						<?php get_sidebar(); ?>
+					</div>
 				</div>
 			</div>
 		</main><!-- #main -->

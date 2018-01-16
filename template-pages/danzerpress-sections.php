@@ -61,6 +61,10 @@ $danzerpressSectionClass = array(
 		        	include(locate_template('danzerpress-section-parts/hero-section.php' ));
 		        endif; //end hero section
 
+		        if( get_row_layout() == 'half_and_half' ): 
+		        	include(locate_template('danzerpress-section-parts/half-and-half-section.php' ));
+		        endif; //end hero section
+
 				// #Icons
 		        if( get_row_layout() == 'icons' ):
 		        	include(locate_template('danzerpress-section-parts/icons.php'));
