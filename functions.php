@@ -278,6 +278,10 @@ function danzerpress_scripts() {
 	//Tilt
 	wp_enqueue_script( 'tilt-js', 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js', array(), null, true );
 
+	//Snow!
+    //wp_enqueue_script( 'jquery-snow', get_template_directory_uri() . '/js/jquery-snow.js', array( 'jquery' ), '1.0.0', true );
+    //wp_enqueue_script( 'snow-ready', get_template_directory_uri() . '/js/snow-flakes-ready.js', array( 'jquery' ), '1.0.0', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

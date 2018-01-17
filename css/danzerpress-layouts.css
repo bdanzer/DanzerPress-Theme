@@ -86,7 +86,7 @@ h5,
 	box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.25);
 }
 .danzerpress-shadow-2 {
-	box-shadow: 0px 10px 25px #00000017;
+	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.09019607843137255);
 }
 .danzerpress-button-modern, 
 .form-row input.woocommerce-Button.button, 
@@ -384,8 +384,15 @@ div.wpcf7-validation-errors {
 .danzerpress-col-4,
 .danzerpress-col-5,
 .danzerpress-col-7,
+.danzerpress-col-1-fix,
+.danzerpress-col-2-fix,
+.danzerpress-col-3-fix,
+.danzerpress-col-4-fix,
+.danzerpress-col-5-fix,
 .danzerpress-one-third,
 .danzerpress-two-thirds,
+.danzerpress-one-third-fix,
+.danzerpress-two-thirds-fix,
 .danzerpress-one-fourth,
 .danzerpress-one-half,
 .danzerpress-three-fourths,
