@@ -19,7 +19,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 	<?php } ?>
 
 	<div class="danzerpress-flex-row">
-		<div class="danzerpress-four-fifths danzerpress-col-center">
+		<div class="danzerpress-col-1 danzerpress-col-center">
 
 		 	<div class="danzerpress-flex-row">
 		 		<?php 

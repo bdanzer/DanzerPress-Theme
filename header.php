@@ -37,7 +37,7 @@ $danzerpress_body = array(
 
 $danzerpress_navigation = array();
 
-if (get_field('navigation_style', 'option') == 'transparent') {
+if (get_field('navigation_style', 'option') == 'transparent' && get_field('title_screen_header') != 2) {
   array_push($danzerpress_navigation, 'transparent');
   array_push($danzerpress_body, 'danzerpress-transparent');
 } else {
@@ -108,11 +108,13 @@ if ( !is_front_page() ) {
       $url = 'https://unsplash.it/1920/1070/?random';
     }
 
-    echo '
-    <div class="danzerpress-title-area parallax-window" data-parallax="scroll" data-image-src="' . $url . '" style="display: flex;align-items: center;justify-content: center;">
-      <h1 class="danzerpress-title">' . $title . '</h1>
-    </div>
-    ';
+    if (get_field('title_screen_header') != 2) {
+      echo '
+      <div class="danzerpress-title-area parallax-window" data-parallax="scroll" data-image-src="' . $url . '" style="display: flex;align-items: center;justify-content: center;">
+        <h1 class="danzerpress-title">' . $title . '</h1>
+      </div>
+      ';
+    }
 
     ?>
     <style type="text/css">
