@@ -499,4 +499,3 @@ function jp_sync_acf_fields($json_dirs) {
 	}
 }
 
-?>

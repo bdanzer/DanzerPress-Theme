@@ -14,5 +14,3 @@ function danzerpressSectionClass($array) {
 		echo $value . ' ';
 	}
 }
-
-?>

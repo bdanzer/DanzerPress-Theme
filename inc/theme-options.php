@@ -60,5 +60,3 @@
 	<?php 
 	}
 	add_action('wp_footer', 'add_drawer_to_footer');
-
-?>
