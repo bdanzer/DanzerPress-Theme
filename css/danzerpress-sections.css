@@ -21,7 +21,7 @@
 
 /*half and half section*/
 div.half-and-half {
-    background: transparent !important;
+    /*background: transparent !important;*/
     padding: 0px;
 }
 .half-and-half .danzerpress-wrap,
@@ -29,10 +29,17 @@ div.half-and-half {
 .half-and-half .danzerpress-container-fw {
     height: 100%;
 }
+.half-and-half .danzerpress-content {
+    max-width: 70%;
+    margin: auto;
+}
 
 @media screen and (max-width: 767px) {
     .half-and-half .danzerpress-order-0 {
         display: none !important;
+    }
+    .half-and-half .danzerpress-content {
+        max-width: calc(100% - 60px);
     }
 }
 
@@ -177,7 +184,7 @@ div.slider-revolution-section {
     position: relative;
 }
 .accordian h4 {
-	margin: 0px;
+    margin: 0px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

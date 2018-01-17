@@ -28,7 +28,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 				</div>
 
 				<div class="danzerpress-col-2-fix <?php echo $background_class; ?>" style="display: flex; flex-direction: column; justify-content: center; padding: 140px 0; <?php echo $background_color; ?>">
-					<div class="danzerpress-content danzerpress-align-center" style="max-width: 70%; margin: auto;">
+					<div class="danzerpress-content danzerpress-align-center" style="">
 						<h2 class="danzerpress-title <?php echo $danzerpress_font_color; ?>" style="margin-bottom: 20px; text-align: left;"><?php echo $section_title; ?></h2>
 						<p class="<?php echo $danzerpress_font_color; ?>" style="text-align: left;"><?php echo $section_description; ?></p>
 						<?php
