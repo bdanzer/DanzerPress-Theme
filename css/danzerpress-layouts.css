@@ -25,6 +25,7 @@ p {
     font-size: 16px;
     line-height: 26px;
     color: grey;
+    letter-spacing: .5px;
 }
 .danzerpress-title {
     font-size: 40px;
@@ -431,22 +432,19 @@ div.wpcf7-validation-errors {
 		flex: 0 0 calc(50% - 30px);
 		max-width: calc(50% - 30px);
 	}
-	.danzerpress-two-thirds,
-	.danzerpress-three-fourths,
-	.danzerpress-four-fifths,
 	.danzerpress-one-third-fix,
 	.danzerpress-two-thirds-fix,
 	.danzerpress-lg-1 {
 	    -ms-flex: 0 0 calc(100%);
 	    flex: 0 0 calc(100%);
 	    max-width: calc(100%);
-		margin: 0px 0px 20px;
 	}
 	.danzerpress-one-third,
 	.danzerpress-two-thirds,
 	.danzerpress-one-fourth,
 	.danzerpress-three-fourths, 
-	.danzerpress-one-half {
+	.danzerpress-one-half,
+	.danzerpress-four-fifths {
 	    -ms-flex: 0 0 calc(100%);
 	    flex: 0 0 calc(100%);
 	    max-width: calc(100%);
@@ -492,15 +490,10 @@ div.wpcf7-validation-errors {
     }
 	/*Percentages*/
 	.danzerpress-col-1,
-	.danzerpress-col-1-fix,
 	.danzerpress-col-2,
-	.danzerpress-col-2-fix,
 	.danzerpress-col-3,
-	.danzerpress-col-3-fix,
 	.danzerpress-col-4,
-	.danzerpress-col-4-fix,
 	.danzerpress-col-5,
-	.danzerpress-col-5-fix,
 	.danzerpress-one-third,
 	.danzerpress-two-thirds,
 	.danzerpress-one-fourth,
@@ -510,6 +503,16 @@ div.wpcf7-validation-errors {
 		flex: 0 0 100%;
 		max-width: 100%;
 		margin: 0px 0px 20px;
+	}
+
+	.danzerpress-col-1-fix,
+	.danzerpress-col-2-fix,
+	.danzerpress-col-3-fix,
+	.danzerpress-col-4-fix,
+	.danzerpress-col-5-fix {
+		-ms-flex: 0 0 calc(100%);
+		flex: 0 0 100%;
+		max-width: 100%; 
 	}
 	.danzerpress-md-2 {
 	    -ms-flex: 0 0 calc(50% - 30px);
@@ -543,12 +546,10 @@ div.wpcf7-validation-errors {
 	    -ms-flex: 0 0 calc(100%);
 		flex: 0 0 100%;
 		max-width: 100%;
-		margin: 0px 0px 20px;
 	}
 	.danzerpress-xs-2 {
 	    -ms-flex: 0 0 calc(100%);
 		flex: 0 0 100%;
 		max-width: 100%;
-		margin: 0px 0px 20px;
 	}
 }

@@ -1212,7 +1212,8 @@
                             },
                             "choices": {
                                 "simplegallery": "Simple Gallery",
-                                "fourimages": "Four Image Gallery"
+                                "fourimages": "Four Image Gallery",
+                                "portfolio": "Portfolio Section"
                             },
                             "default_value": [],
                             "allow_null": 0,
@@ -1248,7 +1249,22 @@
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a5c120831c71",
+                                        "operator": "==",
+                                        "value": "simplegallery"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5a5c120831c71",
+                                        "operator": "==",
+                                        "value": "fourimages"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1375,6 +1391,75 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5a5e970084178",
+                            "label": "Portfolio Section",
+                            "name": "portfolio_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a5c120831c71",
+                                        "operator": "==",
+                                        "value": "portfolio"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5a5e972184179",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "Best results are with square images",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5a5e975e8417a",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         },
@@ -2876,5 +2961,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1516089380
+    "modified": 1516148900
 }

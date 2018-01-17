@@ -70,5 +70,13 @@
 
 		$("header .sub-menu").parent().append("<i class='fa fa-caret-down'></i>");
 
+		$( document ).ready(function() {
+			$('.danzerpress-tilt').tilt({
+			    glare: true,
+			    maxGlare: .5,
+			    scale: 1.1
+			})
+		});
+
 
 })(jQuery);

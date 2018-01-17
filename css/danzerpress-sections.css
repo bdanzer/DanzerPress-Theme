@@ -43,13 +43,11 @@ div.half-and-half {
 }
 
 /*Image & Video Section*/
-.danzerpress-image-wrap img {
-    border: 1px solid #201927;
-}
 .danzerpress-image-wrap {
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5625rem 2.8125rem 0 rgba(0, 0, 0, 0.15);
     line-height: 0px;
     overflow: hidden;
+    border: 1px solid #201927;
 }
 .danzerpress-image-section .danzerpress-section-content p.image-section-p {
     font-size: 18px;
@@ -64,15 +62,17 @@ div.half-and-half {
     width: 100%;
 }
 
-/*Four image and simple gallery section*/
+/*Four image and simple gallery section and portfolio section square force*/
 .four-image-section .danzerpress-image-wrap,
-.simple-gallery-section .danzerpress-image-wrap {
+.simple-gallery-section .danzerpress-image-wrap,
+.portfolio-section .danzerpress-image-wrap {
     width: 100%;
     padding-top: 100%;
     position: relative;
 }
 .four-image-section img,
-.simple-gallery-section img {
+.simple-gallery-section img,
+.portfolio-section img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -81,6 +81,14 @@ div.half-and-half {
     left: 0;
     bottom: 0;
     right: 0;
+}
+.portfolio-section .danzerpress-image-wrap img:hover {
+    transition: 2s;
+    transform: scale(1.1);
+    opacity: 1;
+}
+.portfolio-section .danzerpress-image-wrap a:hover {
+    opacity: 1;
 }
 
 

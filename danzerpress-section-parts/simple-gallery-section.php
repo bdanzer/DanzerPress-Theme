@@ -47,6 +47,8 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 	<?php } elseif ( $section_layout == 'fourimages' ) {
 		include(locate_template('danzerpress-section-parts/four-image-content.php' )); 
+	} elseif ( $section_layout == 'portfolio' ) {
+		include(locate_template('danzerpress-section-parts/portfolio-content.php' )); 
 	} ?>
 
 	</div>
