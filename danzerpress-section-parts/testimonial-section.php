@@ -7,11 +7,17 @@ $starCounter = 0;
 include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 	
 	<h2 class="danzerpress-title" style=""><?php echo $section_title; ?></h2>
-	<div class="danzerpress-flex-row">
-		<div class="danzerpress-two-thirds danzerpress-col-center">
-			<p style="text-align: center; font-size: 18px;margin-bottom: 40px;"><?php echo $section_description; ?></p>
+	
+	<?php if ($section_description) { ?>
+
+		<div class="danzerpress-flex-row">
+			<div class="danzerpress-two-thirds danzerpress-col-center">
+				<p style="text-align: center; font-size: 18px;margin-bottom: 40px;"><?php echo $section_description; ?></p>
+			</div>
 		</div>
-	</div>
+
+	<?php } ?>
+
 	<div class="danzerpress-flex-row">
 		<div class="danzerpress-four-fifths danzerpress-col-center">
 
@@ -40,6 +46,10 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 							while ( $starCounter < $testimonialStars ) {
 								echo '<i class="fa fa-star"></i>';
 								$starCounter++;
+							}
+
+							if ($starCounter == $testimonialStars) {
+								$starCounter = 0;
 							}
 									
 						echo'
