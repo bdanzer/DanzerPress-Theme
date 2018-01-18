@@ -15,10 +15,14 @@
         	<?php 
         		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');
         		$post_link = get_permalink(); 
+
+        		if (!$featured_img_url) {
+        			$featured_img_url = danzerpress_no_image();
+        		}
         	?>
         	<a href="<?php echo $post_link; ?>"><img src="<?php echo $featured_img_url; ?>"></a>
 		</div>
-		<div class="danzerpress-box" style="display: flex;justify-content: center;align-items: center;">
+		<div class="danzerpress-box danzerpress-shadow-3" style="display: flex;justify-content: center;align-items: center;">
 			<div class="content-wrap">
 				<header class="entry-header">
 					<?php

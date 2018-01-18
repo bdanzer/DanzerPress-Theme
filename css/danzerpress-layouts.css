@@ -88,6 +88,10 @@ h5,
 .danzerpress-shadow-2 {
 	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.09019607843137255);
 }
+.danzerpress-shadow-3 {
+	box-shadow: 0 1px 1px rgba(0,0,0,.08);
+}
+
 .danzerpress-button-modern, 
 .form-row input.woocommerce-Button.button, 
 input[type="button"], 

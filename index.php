@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="danzerpress-container-fw" style="">
-		<main id="main" class="danzerpress-wrap" style="padding-top: 45px;">
+	<div id="primary" class="danzerpress-container-fw" style="padding: 40px 0">
+		<main id="main" class="danzerpress-wrap" style="">
 			<div class="danzerpress-flex-row">
-				<div class="danzerpress-main-ns">
+				<div class="danzerpress-main-ns" style="overflow: hidden;">
 
 					<?php
 					if ( have_posts() ) : ?>

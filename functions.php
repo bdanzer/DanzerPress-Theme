@@ -159,10 +159,16 @@ function danzerpress_content_width() {
 add_action( 'after_setup_theme', 'danzerpress_content_width', 0 );
 
 
-function is_blog () {
+function is_blog() {
 	global  $post;
 	$posttype = get_post_type($post );
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+}
+
+//return no image
+function danzerpress_no_image() {
+	$url = get_template_directory_uri() . '/danzerpress-images/no-image.png';
+	return $url;
 }
 
 /**

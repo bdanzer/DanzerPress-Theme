@@ -7,7 +7,7 @@ get_header(); ?>
 		<main id="main" class="danzerpress-wrap">
 			<div class="danzerpress-flex-row">
 				<div class="danzerpress-main-ns" style="max-width: 900px; margin: auto;">
-					<div class="danzerpress-box danzerpress-white">
+					<div class="danzerpress-box danzerpress-white danzerpress-shadow-3">
 						<?php
 						while ( have_posts() ) : the_post();
 

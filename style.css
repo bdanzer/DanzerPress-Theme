@@ -1031,6 +1031,23 @@ h2.widget-title {
 	margin: 0 0 1.5em;
 }
 
+.danzerpress-prev-image,
+.danzerpress-next-image {
+	height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #201927;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
