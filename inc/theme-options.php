@@ -4,15 +4,17 @@
 		$navigation_layout = get_field('navigation_style', 'options');
 		$siteColor = get_field('theme_color', 'options');
 		$menuBackground = get_field('menu_background', 'options'); 
-		$menuColor = get_field('menu_color', 'options')?>
+		$menuColor = get_field('menu_color', 'options'); ?>
 		
 		<style type="text/css">
 			<?php if ($siteColor) { ?>
 
 				a,
-				ul#primary-menu li.current-menu-item a,
 				blockquote:before {
 					color: <?php echo $siteColor; ?>;
+				}
+				ul#primary-menu li.current-menu-item a {
+					color: <?php echo $siteColor; ?> !important;
 				}
 				.danzerpress-button-modern, 
 				.form-row input.woocommerce-Button.button, 
@@ -30,10 +32,18 @@
 				ul#primary-menu li:hover {
 				    border-color: <?php echo $siteColor; ?>;
 				}
+				::-moz-selection { 
+					background: <?php echo $siteColor; ?>; 
+					color: white;
+				}
+				::selection { 
+					background: <?php echo $siteColor; ?>; 
+					color: white;
+				}
 
 			<?php } ?>
 
-			<?php if ($menuBackground && $navigation_layout != 'transparent') { ?>
+			<?php if ($menuBackground != '' && $navigation_layout != 'transparent') { ?>
 
 				/*Change Navigation color*/
 				header.drawer-navbar {
@@ -46,12 +56,13 @@
 				}
 			<?php } ?>
 
-			<?php if ($menuColor && $navigation_layout != 'transparent') { ?>
+			<?php if ($menuColor != '' && $navigation_layout != 'transparent') { ?>
 				
 			<?php } else { ?>
-				.danzerpress-non-trans ul#primary-menu li a {
+				.danzerpress-non-trans ul#primary-menu li a,
+				.danzerpress-non-trans .fa.fa-caret-down {
 					color: <?php echo $menuColor; ?>;
-				}
+				} 
 			<?php } ?>
 			
 			

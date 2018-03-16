@@ -1,7 +1,7 @@
 /*
 Theme Name: DanzerPress
 Theme URI: https://github.com/bdanzer/DanzerPress-Theme
-Version: 2.2.6
+Version: 3.0.0
 Author: Britt Danzer
 Author URI: https://danzerpress.com
 Description: This theme was developed to add more flexibility to creating websites and keeping it light. Most themes come with way too many settings than you need. Thus why I created this simple light theme that has powerful capabilities.
@@ -325,14 +325,6 @@ tr, th, td {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-::-moz-selection { 
-	background: #05C4EB; 
-	color: white;
-}
-::selection { 
-	background: #05C4EB; 
-	color: white;
-}
 body,
 button,
 input,
@@ -689,7 +681,7 @@ ul#primary-menu .sub-menu li:hover {
 	}
 }
 ul#primary-menu li.current-menu-item a {
-    color: #05C4EB;
+    color: #05C4EB !important;
 }
 .has-children {
     padding-right: 10px !important;
@@ -717,6 +709,9 @@ ul#primary-menu li.current-menu-item a {
 header.transparent,
 header.danzerpress-trans {
 	background: transparent;
+}
+.danzerpress-non-trans {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
 }
 header.danzerpress-non-trans {
     background: rgb(36, 42, 47);

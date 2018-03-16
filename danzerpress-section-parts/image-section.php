@@ -43,11 +43,11 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 			<div class="danzerpress-col-1 danzerpress-col-center">
 				<div class="danzerpress-flex-row">
 					<div class="danzerpress-col-2 <?php echo $order; ?>">
-						<div class="danzerpress-image-wrap danzerpress-16-9-container wow <?php echo $wowclass; ?>">
+						<div class="danzerpress-image-wrap danzerpress-rectangle wow <?php echo $wowclass; ?>">
 
 							<?php 
 							if ( $section_layout == 'image') {
-								echo'<img class="danzerpress-ar-items" src="' . $section_image . '">';
+								echo'<img class="danzerpress-ab-items" src="' . $section_image . '">';
 							} elseif ( $section_layout == 'video' ) {
 								echo $iframe;
 							}
