@@ -47,7 +47,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 							<?php 
 							if ( $section_layout == 'image') {
-								echo'<img class="danzerpress-ab-items" src="' . $section_image . '">';
+								echo'<img data-fancybox="' . $section_id . '" data-src="' . $section_image . '" class="danzerpress-ab-items" src="' . $section_image . '">';
 							} elseif ( $section_layout == 'video' ) {
 								echo $iframe;
 							}
