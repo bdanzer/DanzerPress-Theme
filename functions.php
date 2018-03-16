@@ -256,7 +256,7 @@ function danzerpress_scripts() {
 
     //Fancybox
     wp_enqueue_script( 'fancybox.js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array( 'jquery' ), '1.0.0', true );
-    wp_enqueue_style( 'fancybox.css', get_template_directory_uri() . '/js/jquery.fancybox.min.css' );
+    wp_enqueue_style( 'fancybox.css', get_template_directory_uri() . '/css/jquery.fancybox.min.css' );
 
     //Tabulous
     //wp_enqueue_script( 'jquery-1.7.2', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array( 'jquery' ), '1.0.0', true );

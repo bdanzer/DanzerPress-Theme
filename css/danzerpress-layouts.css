@@ -209,6 +209,14 @@ div.wpcf7-validation-errors {
 	background: #f8f9f9;
 }
 
+/*Override display*/
+.danzerpress-display {
+	display: block;
+}
+.danzerpress-no-display {
+	display: none;
+}
+
 /*Flex directions*/
 .danzerpress-flex-row {
     display: flex;

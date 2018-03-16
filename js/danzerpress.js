@@ -1,50 +1,82 @@
 (function( $ ) {
  	
+ 	//Prevent Conflicts
  	$.noConflict();
     "use strict";
 
-	new WOW().init();
+	    //Wow init
+		new WOW().init();
 
-
+		//Fix transparent menu when scrolling
 		var a = $("html").offset().top;
 
 		$(document).scroll(function(){
 		    if($(this).scrollTop() > a)
 		    {   
 		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').addClass("danzerpress-non-trans").removeClass("danzerpress-trans");
+		       $('.danzerpress-emergency-header').addClass("danzerpress-no-display");
 		    } else {
 		       $('header.drawer-navbar.drawer-navbar--fixed.transparent').removeClass("danzerpress-non-trans").addClass("danzerpress-trans");
+		       $('.danzerpress-emergency-header').removeClass("danzerpress-no-display");
 		    }
 		});
 
-	  	$("a").on('click', function(event) {
 
-	    // Make sure this.hash has a value before overriding default behavior
-	    if (this.hash !== "") {
-		      // Prevent default anchor click behavior
-		      event.preventDefault();
+		//Scrolling to anchor
+	  	$(".danzerpress-hash").on('click', function(event) {
 
-		      // Store hash
-		      var hash = this.hash;
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+			      // Prevent default anchor click behavior
+			      event.preventDefault();
 
-		      // Using jQuery's animate() method to add smooth page scroll
-		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		      $('html, body').animate({
-		        scrollTop: $(hash).offset().top + (-64)
-		      }, 1000, function(){
-		   
-		        // Add hash (#) to URL when done scrolling (default click behavior)
-		        
-		      });
-		    } // End if
+			      // Store hash
+			      var hash = this.hash;
+			      console.log(hash);
+
+			      // Using jQuery's animate() method to add smooth page scroll
+			      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top + (-64)
+			      }, 1000, function(){
+			   
+			        // Add hash (#) to URL when done scrolling (default click behavior)
+			        
+			      });
+			    } // End if
 		  });
 
+	  	$(window).on("load", function () {
+
+		  	var urlHash = window.location.href.split("#")[1];
+		  	console.log(urlHash);
+
+		  	if (urlHash &&  $('#' + urlHash).length ) {
+
+			  	$('html, body').animate({
+			        scrollTop: $('#' + urlHash).offset().top + (-64)
+			    }, 1000, function(){
+
+
+			    });
+		  	}
+
+	  	});
+
+
+	  	//Scroll to fix init
 	  	$(document).ready(function() {
 		  $('#toc').scrollToFixed({
 		  	marginTop: 110,
 		  });
+
+		  $('#danzerpress-fixed').scrollToFixed({
+		  	marginTop: 90,
+		  });
 		});
 
+
+	  	//Menu Fixing
 	  	jQuery(document).ready(function() {
 		  jQuery('#primary-menu li').has('ul').addClass('has-children');
 		});
@@ -70,12 +102,26 @@
 
 		$("header .sub-menu").parent().append("<i class='fa fa-caret-down'></i>");
 
+
+		//Tilt.js init defaults
 		$( document ).ready(function() {
 			$('.danzerpress-tilt').tilt({
 			    glare: true,
 			    maxGlare: .5,
 			    scale: 1.1
 			})
+		});
+
+
+		//Fancybox Defaults
+		$('[data-fancybox]').fancybox({
+			youtube : {
+				controls : 0,
+				showinfo : 0
+			},
+			vimeo : {
+				color : 'f00'
+			}
 		});
 
 

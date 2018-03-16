@@ -12,8 +12,8 @@ if ($section_name == 'danzerpress-hero-section') {
 
 if ( $section_button_text_left || $section_button_text_right ) { ?>
 	<p class="danzerpress-button-wrap" style="margin-top: 20px;">
-		<a href="<?php echo $section_button_link_left; ?>" class="danzerpress-button-modern danzerpress-button-left ps2id wow rubberBand"><?php echo $section_button_text_left; ?></a>
-		<a href="<?php echo $section_button_link_right; ?>" class="danzerpress-button-modern-transparent <?php echo $danzerpress_font_color; ?> ps2id wow fadeIn"><?php echo $section_button_text_right; ?></a>
+		<a href="<?php echo $section_button_link_left; ?>" class="danzerpress-button-modern danzerpress-button-left danzerpress-hash wow rubberBand"><?php echo $section_button_text_left; ?></a>
+		<a href="<?php echo $section_button_link_right; ?>" class="danzerpress-button-modern-transparent <?php echo $danzerpress_font_color; ?> danzerpress-hash wow fadeIn"><?php echo $section_button_text_right; ?></a>
 	</p>
 	
 <?php } ?>
