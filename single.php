@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="danzerpress-container-fw" style="padding-top: 40px; background: white;">
 		<main id="main" class="danzerpress-wrap">
-			<div class="danzerpress-flex-row">
+			<div class="danzerpress-flex-row danzerpress-row-fix">
 				<div class="danzerpress-two-thirds">
 					
 					<?php if (get_the_post_thumbnail()) { ?>
@@ -29,7 +29,7 @@ get_header(); ?>
 						
 
 						?>
-						<div id="cooler-nav" class="navigation danzerpress-flex-row">
+						<div id="cooler-nav" class="navigation danzerpress-flex-row danzerpress-row-fix">
 								<?php $prevPost = get_previous_post(true);
 								if($prevPost) {?>
 									<div class="nav-box previous danzerpress-col-2">

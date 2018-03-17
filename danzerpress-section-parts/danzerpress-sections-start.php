@@ -8,7 +8,7 @@
 </style>
 
 <div class="danzerpress-wrap">
-    <div class="danzerpress-flex-row" style="padding-top: 40px;">
+    <div class="danzerpress-flex-row danzerpress-row-fix" style="padding-top: 40px;">
         <div class="danzerpress-one-fourth">
             <div id="toc" class="danzerpress-box danzerpress-white" style="border: 2px solid #d2d2d2;">
             </div><!--/.well -->

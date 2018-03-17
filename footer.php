@@ -16,7 +16,7 @@
 			<?php if(is_active_sidebar('footer-sidebar-1')){ ?>
 				<div class="danzerpress-footer-main">
 					<div class="danzerpress-wrap">
-						<div class="danzerpress-flex-row">
+						<div class="danzerpress-flex-row danzerpress-row-fix">
 							<?php dynamic_sidebar('footer-sidebar-1'); ?>
 						</div>
 					</div>

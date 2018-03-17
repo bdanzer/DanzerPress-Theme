@@ -1,5 +1,5 @@
 <div class="danzerpress-four-fifths danzerpress-col-center">
-	<div class="danzerpress-flex-row">
+	<div class="danzerpress-flex-row danzerpess-row-fix">
 
 		<div class="danzerpress-col-2 <?php echo $order; ?>">
 
@@ -16,7 +16,7 @@
 					$image = get_sub_field('image');
 
 					echo '
-					<div class="danzerpress-col-2 danzerpress-md-2 wow zoomIn">
+					<div class="danzerpress-col-2 danzerpress-md-2 danzerprss-sm-2 danzerpress-xs-2 wow zoomIn">
 						<div class="danzerpress-image-wrap">
 						<a data-fancybox="four-image-section" href="' . $image . '"><img src="' . $image . '"></a>
 						</div>

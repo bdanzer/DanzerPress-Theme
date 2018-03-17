@@ -26,7 +26,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 				// check if the nested repeater field has rows of data
 	        	if( have_rows('testimonial_blocks') ):
 
-				 	echo '<div class="danzerpress-flex-row">';
+				 	echo '<div class="danzerpress-flex-row danzerpress-row-fix">';
 
 				 	// loop through the rows of data
 				    while ( have_rows('testimonial_blocks') ) : the_row();
@@ -40,7 +40,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 					
 
 						echo '
-							<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-xs-1" data-tilt style="transform-style: preserve-3d;">
+							<div class="danzerpress-col-3 danzerpress-md-1 danzerpress-sm-1 danzerpress-xs-1" data-tilt style="transform-style: preserve-3d;">
 								<div class="danzerpress-content danzerpress-shadow-2 wow fadeInUp ' . $danzerpressColor . '" style="padding: 40px;text-align: center;border-radius: 2px;">';
 									
 							while ( $starCounter < $testimonialStars ) {

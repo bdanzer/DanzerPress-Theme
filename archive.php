@@ -16,7 +16,7 @@ get_header(); ?>
 
 					<?php
 					if ( have_posts() ) : ?>
-						<div class="danzerpress-flex-row">
+						<div class="danzerpress-flex-row danzerpress-row-fix">
 
 						<?php
 						/* Start the Loop */

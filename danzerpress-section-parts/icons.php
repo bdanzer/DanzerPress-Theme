@@ -25,7 +25,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
         	// check if the nested repeater field has rows of data
         	if( have_rows('icons_repeater') ):
 
-			 	echo '<div class="danzerpress-flex-row">';
+			 	echo '<div class="danzerpress-flex-row danzerpress-row-fix">';
 
 			 	// loop through the rows of data
 			    while ( have_rows('icons_repeater') ) : the_row();
@@ -36,7 +36,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 					$description = get_sub_field('description');
 
 					echo '
-					<div class="danzerpress-col-' . $columns . ' danzerpress-md-2 danzerpress-xs-1">
+					<div class="danzerpress-col-' . $columns . ' danzerpress-md-2 danzerpress-sm-2 danzerpress-xs-1">
 						<div class="danzerpress-icon-box wow zoomIn">
 							<img src="' . $image . '">
 						</div>

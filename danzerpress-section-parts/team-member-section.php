@@ -33,11 +33,11 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 						}
 						?>
 						<div class="danzerpress-flex-row <?php echo $section_name . '-container'; ?>">
-							<div class="danzerpress-one-third-fix danzerpress-team-member-image danzerpress-zero">
+							<div class="danzerpress-one-third danzerpress-fix danzerpress-team-member-image danzerpress-zero">
 								<img class="wow fadeInLeft" src="<?php echo $section_new_image; ?>">
 							</div>
 
-							<div class="danzerpress-two-thirds-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
+							<div class="danzerpress-two-thirds danzerpress-fix danzerpress-zero <?php echo $danzerpressColor; ?> wow fadeInUp">
 								<div class="danzerpress-box">
 									<h2 style="margin-bottom: 0px;"><?php echo $job_name ?></h2>
 									<h4 style="margin-bottom: 20px;"><?php echo $job_title; ?></h4>

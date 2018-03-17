@@ -1,5 +1,5 @@
 <div class="danzerpress-col-1 danzerpress-col-center">
-	<div class="danzerpress-flex-row">
+	<div class="danzerpress-flex-row danzerpress-row-fix">
 		<div class="danzerpress-col-2 <?php echo $order; ?>">
 
 			<?php if ($hero_layout != 3) { ?>
@@ -12,7 +12,7 @@
 
 		</div>
 		<div id="" class="danzerpress-col-2 danzerpress-flex-row">
-			<div class="danzerpress-align-center">
+			<div class="danzerpress-align-self">
 				<h2 class="danzerpress-title <?php echo $danzerpress_font_color; ?> wow fadeIn" style="text-align: left;"><?php echo $section_title; ?></h2>
 				<p class="danzerpress-content <?php echo $danzerpress_font_color; ?> wow fadeIn" style="text-align: left;"><?php echo $section_description; ?></p>
 				

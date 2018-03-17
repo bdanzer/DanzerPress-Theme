@@ -41,7 +41,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 		
 		<?php if ( $section_layout != 'longimage' ) { ?>
 			<div class="danzerpress-col-1 danzerpress-col-center">
-				<div class="danzerpress-flex-row">
+				<div class="danzerpress-flex-row danzerpress-row-fix">
 					<div class="danzerpress-col-2 <?php echo $order; ?>">
 						<div class="danzerpress-image-wrap danzerpress-rectangle wow <?php echo $wowclass; ?>">
 
@@ -56,7 +56,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 						</div>
 					</div>
 					<div class="danzerpress-col-2 danzerpress-flex-row">
-						<div class="danzerpress-section-content danzerpress-align-center">
+						<div class="danzerpress-section-content danzerpress-align-self">
 							<h2 class="danzerpress-title wow fadeIn"><?php echo $section_title; ?></h2>
 							<p class="wow fadeIn image-section-p"><?php echo $section_description; ?></p>
 							<?php 

@@ -18,7 +18,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 				$size_full = 'full'; // (thumbnail, medium, large, full or custom size)
 
 				if( $images ): ?>
-				    <div class="danzerpress-flex-row">
+				    <div class="danzerpress-flex-row danzerpress-row-fix">
 				        <?php foreach( $images as $image ): ?>
 				        	<?php
 				        		//vars
@@ -26,7 +26,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 				        		$image_full = wp_get_attachment_image_url($image['ID'], $size_full);
 
 				        	?>
-				        	<div class="danzerpress-col-3 danzerpress-md-2 wow slideInUp">
+				        	<div class="danzerpress-col-3 danzerpress-md-2 danzerpress-sm-2 danzepress-xs-2 wow slideInUp">
 								<div class="danzerpress-image-wrap">
 									<a data-fancybox="<?php echo 'simple-gallery-section-' . $section_number; ?>" href="<?php echo $image_full; ?>">
 										<img src="<?php echo $image_ml; ?>">

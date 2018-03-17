@@ -10,7 +10,7 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 	<div class="danzerpress-flex-row">
 		<div class="danzerpress-col-1 danzerpress-col-center">
 
-			<div class="danzerpress-flex-row">
+			<div class="danzerpress-flex-row danzerpress-row-fix">
 
 				<?php
 
@@ -46,11 +46,11 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 				<div class="danzerpress-col-<?php echo $column_number . $class; ?>">
 					<div class="danzerpress-flex-row" style="height: 100%; overflow: hidden;">
-						<div class="danzerpress-col-<?php echo $half_or_whole; ?>-fix danzerpress-zero danzerpress-recent-post-section wow zoomIn">
+						<div class="danzerpress-col-<?php echo $half_or_whole; ?> danzepress-fix danzerpress-zero danzerpress-recent-post-section wow zoomIn">
 							<img class="" src="<?php echo $recent_post_url; ?>">
 						</div>
 
-						<div class="danzerpress-col-<?php echo $half_or_whole; ?>-fix danzerpress-zero <?php echo $danzerpressColor; ?> danzerpress-shadow-2 wow fadeIn" style="height: 100%;">
+						<div class="danzerpress-col-<?php echo $half_or_whole; ?> danzerpress-fix danzerpress-zero <?php echo $danzerpressColor; ?> danzerpress-shadow-2 wow fadeIn" style="height: 100%;">
 							<div class="danzerpress-box">
 								<h2><?php the_title(); ?></h2>
 								<p><?php echo excerpt($new_excerpt); ?></p>

@@ -29,7 +29,7 @@ get_header(); ?>
 						
 
 						?>
-						<div id="cooler-nav" class="navigation danzerpress-flex-row">
+						<div id="cooler-nav" class="navigation danzerpress-flex-row danzerpress-row-fix">
 								<?php $prevPost = get_previous_post(true);
 								if($prevPost) {?>
 									<div class="nav-box previous danzerpress-col-2">
