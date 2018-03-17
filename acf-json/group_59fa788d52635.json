@@ -1939,39 +1939,6 @@
                             "append": ""
                         },
                         {
-                            "key": "field_5a596412036db",
-                            "label": "Column Number Split",
-                            "name": "column_number",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_5a595fd5ca585",
-                                        "operator": "==",
-                                        "value": "2"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "1": "1",
-                                "2": "2"
-                            },
-                            "default_value": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "return_format": "value",
-                            "placeholder": ""
-                        },
-                        {
                             "key": "field_5a595f97ca584",
                             "label": "Excerpt Length",
                             "name": "excerpt_length",
@@ -2961,5 +2928,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1521159660
+    "modified": 1521275366
 }

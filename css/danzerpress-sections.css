@@ -102,6 +102,7 @@ div.half-and-half {
 /*Post section*/
 .recent_post_section h2 {
     line-height: 1.5;
+    margin-top: 0px;
 }
 .danzerpress-recent-post-section img,
 .danzerpress-team-member-section img {
@@ -116,9 +117,36 @@ div.half-and-half {
     transform: scale(1.2);
     transition: 1s;
 }
-.danzerpress-recent-post-section {
-    overflow: hidden;
+.danzerpress-recent-post-section img {
+    max-height: 200px;
 }
+.recent_post_section a.danzerpress-button-modern {
+    padding: 0;
+    background: none;
+    border: none;
+    color: #06c4ec;
+    text-transform: capitalize;
+    font-weight: normal;
+    display: inline-block;
+    width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    img.split-section-image {
+        max-height: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    img.split-section-image {
+        max-height: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    img.split-section-image {
+        max-height: 100%;
+    }
+}
+
 
 /*Teeam Member Section*/
 .team-member-section-wrap img {
@@ -214,6 +242,61 @@ div.slider-revolution-section {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+
+/*Slick*/
+/*Arrow Styling*/
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+.slick-prev {
+    left: -35px !important;
+    top: 33% !important;
+}
+.slick-next {
+    right: -35px !important;
+    top: 33% !important;
+}
+.slick-prev:before,
+.slick-next:before {
+    font-family: fontawesome !important;
+    font-size: 31px !important;
+}
+.slick-prev:before {
+    content: '\f104' !important;
+}
+.slick-next:before {
+    content: '\f105' !important;
+}
+
+/*Li styling*/
+.slick-dots li button:before {
+    display: none;
+}
+.slick-dots li {
+    margin: 0 5px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    background-color: #333 !important;
+    height: 3px !important;
+    width: 49px !important;
+    position: relative !important;
+}
+li.slick-active {
+    background: #06c4ec !important;
+}
+@media screen and (max-width: 767px) {   
+    .slick-dots li {
+        height: 2px !important;
+        width: 32px !important;
+        position: relative !important;
+    }
+}
+
+/*Carousel*/
+.danzerpress-slick-carousel .slider-nav .slick-list.draggable {
+    margin: 0 -15px 0 !important;
+}
 
 /*Media Queries*/
 @media screen and (max-width: 500px) {

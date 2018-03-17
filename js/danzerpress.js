@@ -124,5 +124,64 @@
 			}
 		});
 
+		//Slick Slider
+		$('.slider').slick({
+		  infinite: true,
+		  centerMode: false,
+		  slidesToScroll: 3,
+		  slidesToShow: 3,
+		  dots: true,
+		  arrows: false,
+		  autoplay: true,
+		  autoplaySpeed: 3000,
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
+		});
+
+		$('.slider-for').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  autoplay: true,
+		  autoplaySpeed: 6000,
+		  asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+		  slidesToShow: 4,
+		  slidesToScroll: 1,
+		  asNavFor: '.slider-for',
+		  dots: false,
+		  centerMode: false,
+		  focusOnSelect: true,
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: true,
+		        slidesToShow: 2
+		      }
+		    }
+		  ]
+		});
+
 
 })(jQuery);
