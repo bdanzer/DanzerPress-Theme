@@ -37,12 +37,14 @@ include(locate_template('danzerpress-section-parts/content-header.php' )); ?>
 
 					echo '
 					<div class="danzerpress-col-' . $columns . ' danzerpress-md-2 danzerpress-sm-2 danzerpress-xs-1">
-						<div class="danzerpress-icon-box wow zoomIn">
-							<img src="' . $image . '">
-						</div>
-						<div class="danzerpress-content-box wow fadeInUp">
-							<h4>' . $title . '</h4>
-							<p>' . $description . '</p>
+						<div class="danzerpress-content-wrap">
+							<div class="danzerpress-icon-box wow zoomIn">
+								<img src="' . $image . '">
+							</div>
+							<div class="danzerpress-content-box wow fadeInUp">
+								<h4>' . $title . '</h4>
+								<p>' . $description . '</p>
+							</div>
 						</div>
 					</div>
 					';

@@ -428,19 +428,6 @@ if( function_exists('acf_add_options_page') ) {
 
 include_once( get_template_directory() . '/inc/theme-options.php' );
 
- 
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
- 
-function my_acf_json_save_point( $path ) {
-    
-    // update path
-    $path = get_template_directory() . '/acf-json';
-
-    // return
-    return $path;
-    
-}
-
 
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 
