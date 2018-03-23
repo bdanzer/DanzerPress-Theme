@@ -88,13 +88,13 @@
 		$(document).ready(function() {
 			if ($(window).width() > 1024) {
 				$("#primary-menu li").hover(function() {
-					$(this).find("ul").slideToggle('fast');
+					$(this).find("ul").stop().fadeToggle('fast');
 					$(this).find(".fa").toggleClass("fa-caret-up");
 				});
 			} else {
 				$(".has-children ul").hide();
 				$("#primary-menu .fa").click(function() {
-					$(this).siblings("ul").slideToggle();
+					$(this).siblings("ul").stop().fadeToggle();
 					$(this).toggleClass("fa-caret-up");
 				});
 			}
