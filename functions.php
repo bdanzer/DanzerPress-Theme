@@ -429,21 +429,6 @@ if( function_exists('acf_add_options_page') ) {
 include_once( get_template_directory() . '/inc/theme-options.php' );
 
 
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-
-function my_acf_json_load_point( $paths ) {
-    
-    // remove original path (optional)
-    unset($paths[0]);
-    
-    // append path
-    $paths[] = get_template_directory() . '/acf-json';
-    
-    // return
-    return $paths;
-    
-}
-
 /**
  * Function that will automatically update ACF field groups via JSON file update.
  *
