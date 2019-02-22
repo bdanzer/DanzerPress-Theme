@@ -6,7 +6,7 @@ $section_layout = get_sub_field('half_and_half_layout');
 if ($section_layout == 2) {
 	$danzerpress_font_color = 'danzerpress-color-grey';
 	
-	if ($section_is_odd == 1){
+	if ($section_is_odd){
 		$background_class = 'danzerpress-odd';
 	} else {
 		$background_class = '';

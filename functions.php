@@ -349,6 +349,15 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+require get_template_directory() . '/inc/Loader.php';
+require get_template_directory() . '/inc/Controller.php';
+require get_template_directory() . '/inc/Single.php';
+
+/**
+ * Add sections
+ */
+require get_template_directory() . '/inc/Sections.php';
+
 /**
  * Customizer additions.
  */
@@ -490,3 +499,8 @@ function jp_sync_acf_fields($json_dirs) {
 	}
 }
 
+add_action('save_post', 'section_cache_debuffer', 10, 1);
+function section_cache_debuffer($post_id) 
+{
+	delete_transient($post_id . '_section_cache');
+}
